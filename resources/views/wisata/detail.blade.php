@@ -10,20 +10,20 @@
 
       <section class="three-fourth section-tour-content">
         <!--gallery-->
-        <ul class="post-gallery">
-          <li><img src="{{ $wisata->gambar }}"
-              alt="" width="100%" /></li>
-        </ul>
-        <!--//gallery-->
+        <div>
+          <img src="{{ $wisata->gambar }}"
+                alt="" style="width: 100%" />
+        </div>
+              <!--//gallery-->
         <!--inner navigation-->
         <nav class="inner-nav layout-above">
           <ul>
             <li class='description'><a class="explore" href="#description" title="Overview"><span
-                  class='material-icons'>explore</span>Overview</a></li>
+                  class='material-icons'>explore</span>Deskripsi</a></li>
             <li class='itinerary'><a class="place" href="#itinerary" title="Itinerary"><span
                   class='material-icons'>place</span>Lokasi</a></li>
             <li class='accommodation'><a class="business" href="#accommodation" title="Accommodation"><span
-                  class='material-icons'>business</span>Penginapan</a></li>
+                  class='material-icons'>business</span>Akomodasi</a></li>
             <li class='reviews'><a class="insert_emoticon" href="#reviews" title="Reviews"><span
                   class='material-icons'>insert_emoticon</span>Review</a></li>
           </ul>
@@ -43,71 +43,8 @@
           </article>
         </section>
         <section id="itinerary" class="tab-content  layout-above" style="display:none">
-          <article>
-
-            <div class='text-wrap activities'>
-              <h2>Itinerary</h2>
-              <p><img class="alignleft size-full wp-image-106"
-                  src="https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/sample_media/sites/26/2019/04/sq5-400x400.jpg"
-                  alt="" width="400" height="400" /></p>
-              <p>&nbsp;</p>
-              <p><strong>Day 1</strong></p>
-              <p>Tingling of the spine of brilliant syntheses worldlets vastness is bearable only
-                through love citizens of distant epochs <strong>rich in mystery</strong>. With
-                pretty stories for which there's little good evidence a still more glorious dawn
-                awaits star stuff harvesting star light a mote of dust suspended in a sunbeam
-              </p>
-              <p>Of brilliant syntheses invent the universe citizens of distant epochs are
-                creatures of the cosmos rich in mystery. How far away <strong>vanquish the
-                  possible network</strong> of wormholes inconspicuous motes of rock and gas
-                concept of the number one Apollonius of Perga.</p>
-              <hr />
-              <p><img class="alignleft size-full wp-image-103"
-                  src="https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/sample_media/sites/26/2019/04/sq2-400x400.jpg"
-                  alt="" width="400" height="400" /></p>
-              <p>&nbsp;</p>
-              <p><strong>Day 2</strong></p>
-              <p>Tingling of the spine of brilliant syntheses worldlets vastness is bearable only
-                through love citizens of distant epochs <strong>rich in mystery</strong>. With
-                pretty stories for which there's little good evidence a still more glorious dawn
-                awaits star stuff harvesting star light a mote of dust suspended in a sunbeam
-              </p>
-              <p>Of brilliant syntheses invent the universe citizens of distant epochs are
-                creatures of the cosmos rich in mystery. How far away <strong>vanquish the
-                  possible network</strong> of wormholes inconspicuous motes of rock and gas
-                concept of the number one Apollonius of Perga.</p>
-              <hr />
-              <p><img class="alignleft size-full wp-image-104"
-                  src="https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/sample_media/sites/26/2019/04/sq3-400x400.jpg"
-                  alt="" width="400" height="400" /></p>
-              <p>&nbsp;</p>
-              <p><strong>Day 3</strong></p>
-              <p>Tingling of the spine of brilliant syntheses worldlets vastness is bearable only
-                through love citizens of distant epochs <strong>rich in mystery</strong>. With
-                pretty stories for which there's little good evidence a still more glorious dawn
-                awaits star stuff harvesting star light a mote of dust suspended in a sunbeam
-              </p>
-              <p>Of brilliant syntheses invent the universe citizens of distant epochs are
-                creatures of the cosmos rich in mystery. How far away <strong>vanquish the
-                  possible network</strong> of wormholes inconspicuous motes of rock and gas
-                concept of the number one Apollonius of Perga.</p>
-              <hr />
-              <p><img class="alignleft size-full wp-image-105"
-                  src="https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/sample_media/sites/26/2019/04/sq4-400x400.jpg"
-                  alt="" width="400" height="400" /></p>
-              <p>&nbsp;</p>
-              <p><strong>Day 4</strong></p>
-              <p>Tingling of the spine of brilliant syntheses worldlets vastness is bearable only
-                through love citizens of distant epochs <strong>rich in mystery</strong>. With
-                pretty stories for which there's little good evidence a still more glorious dawn
-                awaits star stuff harvesting star light a mote of dust suspended in a sunbeam
-              </p>
-              <p>Of brilliant syntheses invent the universe citizens of distant epochs are
-                creatures of the cosmos rich in mystery. How far away <strong>vanquish the
-                  possible network</strong> of wormholes inconspicuous motes of rock and gas
-                concept of the number one Apollonius of Perga.</p>
-            </div>
-
+          <article style="text-align: center">
+            <div id="location-map" style="width: 100%; height: 500px; display: inline-block"></div>
           </article>
         </section>
         <section id="accommodation" class="tab-content  layout-above" style="display:none">
@@ -215,6 +152,19 @@
       </aside><!-- #secondary -->
     </div>
   </div>
+  <script>
+  function initMap() {
+      var map = new google.maps.Map(document.getElementById('location-map'), {
+        center: new google.maps.LatLng({{ $wisata->lat }}, {{ $wisata->lng }}),
+        zoom: 15
+      });
+      var marker = new google.maps.Marker({
+        map,
+        position: new google.maps.LatLng({{ $wisata->lat }}, {{ $wisata->lng }})
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3Sis_MBeaSHRKlZIPftutQTXQgz5_m8c&callback=initMap"></script>
 </div>
 
 @endsection

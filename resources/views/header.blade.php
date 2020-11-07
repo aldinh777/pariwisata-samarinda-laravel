@@ -1391,9 +1391,6 @@
         src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/inquiry.js?ver=8.15.4'
         id='bookyourtravel-inquiry-js'></script>
       <script type='text/javascript'
-        src='//maps.google.com/maps/api/js?key=AIzaSyDmXF4m9fgq2UuOb5O-53LPHqdoIdYwSDU&#038;ver=8.15.4'
-        id='bookyourtravel-google-maps-js'></script>
-      <script type='text/javascript'
         src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/lib/infobox.min.js?ver=8.15.4'
         id='bookyourtravel-infobox-js'></script>
       <script type='text/javascript'

@@ -20,6 +20,8 @@ class CreateWisatasTable extends Migration
             $table->text('deskripsi_singkat');
             $table->text('deskripsi');
             $table->string('gambar');
+            $table->double('lat');
+            $table->double('lng');
             $table->timestamps();
         });
     }
