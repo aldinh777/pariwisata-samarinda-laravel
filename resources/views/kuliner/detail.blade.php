@@ -44,7 +44,7 @@
                       <figure><img width="600" height="500"
                           src="{{ $rekomendasi->gambar }}"
                           class="attachment-thumbnail size-thumbnail wp-post-image" alt=""
-                          loading="lazy" title="tac3" /></figure>
+                          loading="lazy" title="{{ $rekomendasi->nama }}" /></figure>
                     </a>
                     <div class="details hide-actions hide-description hide-rating ">
                       <div class='item-header'>

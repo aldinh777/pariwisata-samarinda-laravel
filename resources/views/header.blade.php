@@ -1118,6 +1118,10 @@
             data-mobile-force-width="body" data-second-click="go" data-document-click="collapse"
             data-vertical-behaviour="standard" data-breakpoint="960" data-unbind="true"
             data-hover-intent-timeout="300" data-hover-intent-interval="100">
+            <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-50'
+              id='mega-menu-item-50'><a class="mega-menu-link"
+                href="/"
+                tabindex="0">Home</a></li>
             <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-54'
               id='mega-menu-item-54'><a class="mega-menu-link"
                 href="/wisata"
@@ -1132,16 +1136,16 @@
                 tabindex="0">Kuliner</a></li>
             <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-51'
               id='mega-menu-item-51'><a class="mega-menu-link"
-                href="https://themes.themeenergy.com/bookyourtravel/travel-tours/vacations/"
-                tabindex="0">Oleh-oleh</a></li>
+                href="/oleholeh"
+                tabindex="0">Oleh-Oleh</a></li>
             <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-50'
               id='mega-menu-item-50'><a class="mega-menu-link"
-                href="https://themes.themeenergy.com/bookyourtravel/travel-tours/vacations/"
+                href="/workingspace"
                 tabindex="0">Working Space</a></li>
-            <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-49'
-              id='mega-menu-item-49'><a class="mega-menu-link"
-                href="https://themes.themeenergy.com/bookyourtravel/travel-tours/vacations/"
-                tabindex="0">Wahana</a></li>
+            <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-50'
+              id='mega-menu-item-50'><a class="mega-menu-link"
+                href="/about"
+                tabindex="0">About</a></li>
           </ul>
         </div>
         <!--//primary navigation-->

@@ -77,7 +77,7 @@
                   <figure>
                     <img width="600" height="500" src="{{ $wisata->gambar }}"
                       class="attachment-thumbnail size-thumbnail wp-post-image" alt=""
-                      loading="lazy" title="tac5" /></figure>
+                      loading="lazy" title="{{ $wisata->nama }}" /></figure>
                 </a>
                 <div class="details ">
                   <div class='item-header'>

@@ -19,7 +19,7 @@
                   <figure>
                     <img width="600" src="{{ $kafe->gambar }}"
                       class="attachment-thumbnail size-thumbnail wp-post-image" alt=""
-                      loading="lazy" title="tac5"
+                      loading="lazy" title="{{ $kafe->nama }}"
                       style="height: 350px" /></figure>
                 </a>
                 <div class="details ">

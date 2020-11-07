@@ -160,7 +160,7 @@
                               <img src="{{ $wisata->gambar }}"
                                 class="attachment-thumbnail size-thumbnail wp-post-image"
                                 style="width: 360px; height: 200px" alt=""
-                                loading="lazy" title="tac5" /></figure>
+                                loading="lazy" title="{{ $wisata->nama }}" /></figure>
                           </a>
                           <div class="details ">
                             <div class='item-header'>

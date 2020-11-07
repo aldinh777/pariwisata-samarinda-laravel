@@ -1,6 +1,6 @@
 @extends("header")
 
-@section("title", "kuliner Kota Samarinda")
+@section("title", "Kuliner Kota Samarinda")
 
 @section("content")
 <div class="main">
@@ -19,7 +19,7 @@
                   <figure>
                     <img width="600" height="500" src="{{ $kuliner->gambar }}"
                       class="attachment-thumbnail size-thumbnail wp-post-image" alt=""
-                      loading="lazy" title="tac5" /></figure>
+                      loading="lazy" title="{{ $kuliner->nama }}" /></figure>
                 </a>
                 <div class="details ">
                   <div class='item-header'>
