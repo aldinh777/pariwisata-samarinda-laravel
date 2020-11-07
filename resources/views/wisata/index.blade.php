@@ -13,24 +13,15 @@
               <div class="byt-widget-search-inner"
                 style=background-color:#003580;color:#ffffff;width:100%;>
                 <form class="widget-search" method="get"
-                  action="https://themes.themeenergy.com/bookyourtravel/travel-tours/search-results/">
+                  action="/wisata/filter">
                   <div class="block block-1 full-width block-order-1">
-                    <div style="display:none;"
-                      class="filter filter-block-1 filter-order-1 filter-type-what one-sixth">
-                      <span class="label">What?</span>
-                      <div class='radio-wrap'><input checked type="radio"
-                          id="bookyourtravel_search_widget-1-what-tour" name="what"
-                          value="4"><label
-                          for="bookyourtravel_search_widget-1-what-tour">Tour</label>
-                      </div>
-                    </div>
                     <div
                       class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select full-width  filter-tour">
                       <div class="select"><label
                           for="l_bookyourtravel_search_widget-1_0_l">Kategori</label><input
-                          type="hidden" id="hl_0_l" name="hl0l" value=""><select
+                          type="hidden" id="hl_0_l" name="" value=""><select
                           class="filter-locations" data-relid="hl_0_l"
-                          id="l_bookyourtravel_search_widget-1_0_l" name="l">
+                          id="l_bookyourtravel_search_widget-1_0_l" name="kategori">
                           <option value=""></option>
                           <option value="150">Religi</option>
                           <option value="118">Lokal</option>
@@ -40,9 +31,9 @@
                       class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select full-width  filter-tour">
                       <div class="select"><label
                           for="l_bookyourtravel_search_widget-1_0_l">Daerah</label><input
-                          type="hidden" id="hl_0_l" name="hl0l" value=""><select
+                          type="hidden" id="hl_0_l" name="" value=""><select
                           class="filter-locations" data-relid="hl_0_l"
-                          id="l_bookyourtravel_search_widget-1_0_l" name="l">
+                          id="l_bookyourtravel_search_widget-1_0_l" name="daerah">
                           <option value=""></option>
                           <option value="118">Samarinda Seberang</option>
                           <option value="112">Samarinda Ulu</option>

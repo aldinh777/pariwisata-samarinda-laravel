@@ -8,6 +8,7 @@
 
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <title>@yield("title")</title>
+  <link rel='dns-prefetch' href='//maps.google.com' />
   <link rel='dns-prefetch' href='//fonts.googleapis.com' />
   <link rel='dns-prefetch' href='//s.w.org' />
   <link rel="alternate" type="application/rss+xml" title="Travel &amp; Tours &raquo; Feed"
@@ -1072,7 +1073,7 @@
 </head>
 
 <body
-  class="home page-template page-template-page-blank page-template-page-blank-php page page-id-17 custom-background wp-custom-logo  full-screen noslider theme-BookYourTravel woocommerce-no-js mega-menu-primary-menu wpb-js-composer js-comp-ver-6.2.0 vc_responsive currency-usd">
+  class="tour-template-default single single-tour postid-434 custom-background wp-custom-logo  full-screen has-featured-gallery theme-BookYourTravel woocommerce-no-js mega-menu-primary-menu wpb-js-composer js-comp-ver-6.2.0 vc_responsive currency-usd">
   <div class="page-spinner">
     <div></div>
   </div>
@@ -1215,37 +1216,8 @@
         document.body.className = c;
 
       </script>
-      <script type="text/javascript">
-        if (typeof revslider_showDoubleJqueryError === "undefined") {
-          function revslider_showDoubleJqueryError(sliderID) {
-            var err = "<div class='rs_error_message_box'>";
-            err += "<div class='rs_error_message_oops'>Oops...</div>";
-            err += "<div class='rs_error_message_content'>";
-            err +=
-              "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
-            err +=
-              "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
-            err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
-            err += "</div>";
-            err += "</div>";
-            var slider = document.getElementById(sliderID);
-            slider.innerHTML = err;
-            slider.style.display = "block";
-          }
-        }
-
-      </script>
       <link rel='stylesheet' id='woocommerce-currency-switcher-css'
         href='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/plugins/woocommerce-currency-switcher/css/front.css?ver=1.3.2'
-        type='text/css' media='all' />
-      <link rel='stylesheet' id='vc_material-css'
-        href='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/plugins/js_composer/assets/css/lib/vc-material/vc_material.min.css?ver=6.2.0'
-        type='text/css' media='all' />
-      <link rel='stylesheet' id='vc_google_fonts_satisfyregular-css'
-        href='https://fonts.googleapis.com/css?family=Satisfy%3Aregular&#038;ver=6.2.0' type='text/css'
-        media='all' />
-      <link rel='stylesheet' id='vc_animate-css-css'
-        href='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=6.2.0'
         type='text/css' media='all' />
       <script type='text/javascript'
         src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/lib/jquery.uniform.min.js?ver=8.15.4'
@@ -1403,6 +1375,39 @@
       <script type='text/javascript'
         src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/header-ribbon.js?ver=8.15.4'
         id='bookyourtravel-header-ribbon-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/includes/plugins/lightSlider/js/jquery.lightSlider.js?ver=8.15.4'
+        id='bookyourtravel-jquery-lightSlider-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/gallery.js?ver=8.15.4'
+        id='bookyourtravel-gallery-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/tabs.js?ver=8.15.4'
+        id='bookyourtravel-tabs-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/reviews.js?ver=8.15.4'
+        id='bookyourtravel-reviews-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/inquiry.js?ver=8.15.4'
+        id='bookyourtravel-inquiry-js'></script>
+      <script type='text/javascript'
+        src='//maps.google.com/maps/api/js?key=AIzaSyDmXF4m9fgq2UuOb5O-53LPHqdoIdYwSDU&#038;ver=8.15.4'
+        id='bookyourtravel-google-maps-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/lib/infobox.min.js?ver=8.15.4'
+        id='bookyourtravel-infobox-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/maps.js?ver=8.15.4'
+        id='bookyourtravel-maps-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/lib/jquery.tablesorter.min.js?ver=1.0'
+        id='bookyourtravel-tablesorter-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/extra-items.js?ver=8.15.4'
+        id='bookyourtravel-extra-items-js'></script>
+      <script type='text/javascript'
+        src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/js/lib/jquery.prettyPhoto.min.js?ver=8.15.4'
+        id='bookyourtravel-prettyPhoto-js'></script>
       <script type='text/javascript'
         src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-includes/js/hoverIntent.min.js?ver=1.8.1'
         id='hoverIntent-js'></script>
