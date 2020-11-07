@@ -1,0 +1,14 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Kuliner extends Model
+{
+    protected $table = 'kuliner';
+
+    protected $fillable = [
+        'nama', 'deskripsi_singkat', 'deskripsi', 'gambar'
+    ];
+}
