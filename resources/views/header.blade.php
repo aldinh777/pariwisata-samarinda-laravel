@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdn6.agoda.net/js/assets/LEGACY-BROWSERS/theme-agoda-f6b3f30f9ac0.css">
   <link rel="stylesheet" href="https://cdn6.agoda.net/js/assets/LEGACY-BROWSERS/search_nogql-155edca48674.css">
 
+  <link rel="stylesheet" href="https://static.tacdn.com/assets/Cp9bdC.GjqwwlRa.css">
+
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <title>@yield("title")</title>
   <link rel='dns-prefetch' href='//maps.google.com' />
