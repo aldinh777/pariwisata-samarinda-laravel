@@ -257,7 +257,6 @@
       var lat = '{{ $wisata->lat }}';
       var lng = '{{ $wisata->lng }}';
 
-
       var map = new google.maps.Map(document.getElementById('location-map'), {
         center: new google.maps.LatLng(lat, lng),
         zoom: 15
