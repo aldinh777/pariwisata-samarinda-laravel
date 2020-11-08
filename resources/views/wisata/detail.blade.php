@@ -17,13 +17,15 @@
         <!--inner navigation-->
         <nav class="inner-nav layout-above">
           <ul>
-            <li class='description'><a class="explore" href="#description" title="Overview"><span
+            <li class='description'><a class="explore" href="#description" title="Deskripsi"><span
                   class='material-icons'>explore</span>Deskripsi</a></li>
-            <li class='itinerary'><a class="place" href="#itinerary" title="Itinerary"><span
+            <li class='itinerary'><a class="place" href="#itinerary" title="Lokasi"><span
                   class='material-icons'>place</span>Lokasi</a></li>
-            <li class='accommodation'><a class="business" href="#accommodation" title="Accommodation"><span
+            <li class='accommodation'><a class="business" href="#accommodation" title="Akomodasi"><span
                   class='material-icons'>business</span>Akomodasi</a></li>
-            <li class='reviews'><a class="insert_emoticon" href="#reviews" title="Reviews"><span
+            <li class='events'><a class="place" href="#events" title="Event"><span
+                  class='material-icons'>event</span>Event</a></li>
+            <li class='reviews'><a class="insert_emoticon" href="#reviews" title="Review"><span
                   class='material-icons'>insert_emoticon</span>Review</a></li>
           </ul>
         </nav>
@@ -169,6 +171,12 @@
                 </div>
               </a>
             </div>
+          </article>
+        </section>
+        <section id="events" class="tab-content layout-above" style="display:none">
+          <article>
+            <h2>Event di Area</h2>
+            <p>Belum ada Event</p>
           </article>
         </section>
         <section id="reviews" class="tab-content  layout-above" style="display:none">
