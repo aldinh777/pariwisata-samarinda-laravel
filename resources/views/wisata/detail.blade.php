@@ -67,7 +67,7 @@
 
             <div style="border: 1px solid #D3D3D3; padding: 5px; padding-bottom: 0px; margin-bottom: 10px;">
               <a class="RecommendedPropertyCard" target="_blank"
-                href="/id-id/ibis-samarinda/hotel/samarinda-id.html?finalPriceView=0&amp;isShowMobileAppPrice=false&amp;cid=1844104&amp;numberOfBedrooms=&amp;familyMode=false&amp;isAgMse=false&amp;ccallout=false&amp;defdate=false&amp;voucherMode=false&amp;adults=2&amp;children=0&amp;rooms=1&amp;maxRooms=9&amp;checkIn=2020-11-19&amp;childAges=&amp;defaultChildAge=8&amp;travellerType=1&amp;tspTypes=8&amp;los=1&amp;searchrequestid=c86c8125-1aa3-4ea6-b065-aa9b2d8d6bde"
+                href="https://www.agoda.com/id-id/ibis-samarinda/hotel/samarinda-id.html?finalPriceView=0&amp;isShowMobileAppPrice=false&amp;cid=1844104&amp;numberOfBedrooms=&amp;familyMode=false&amp;isAgMse=false&amp;ccallout=false&amp;defdate=false&amp;voucherMode=false&amp;adults=2&amp;children=0&amp;rooms=1&amp;maxRooms=9&amp;checkIn=2020-11-19&amp;childAges=&amp;defaultChildAge=8&amp;travellerType=1&amp;tspTypes=8&amp;los=1&amp;searchrequestid=c86c8125-1aa3-4ea6-b065-aa9b2d8d6bde"
                 data-element-name="personalized-recommendations-hotel-card" data-element-index="0"
                 data-element-value="14676920" data-recommendation-type="4" data-suggestion-type="1">
                 <div class="RecommendedPropertyCard__Image"
@@ -137,7 +137,7 @@
 
             <div style="border: 1px solid #D3D3D3; padding: 5px; padding-bottom: 0px; margin-bottom: 10px;">
               <a class="RecommendedPropertyCard" target="_blank"
-                href="/en-us/bumi-senyiur-hotel/hotel/samarinda-id.html?finalPriceView=0&amp;isShowMobileAppPrice=false&amp;cid=1830697&amp;tag=1068_102c93fb1efde0eb216eb0e9c0a1e4&amp;numberOfBedrooms=&amp;familyMode=false&amp;isAgMse=false&amp;ccallout=false&amp;defdate=false&amp;voucherMode=false&amp;adults=2&amp;children=0&amp;rooms=1&amp;maxRooms=9&amp;checkIn=2020-11-19&amp;childAges=&amp;defaultChildAge=8&amp;travellerType=1&amp;tspTypes=2,8&amp;los=1&amp;searchrequestid=34bcc6cc-f9a8-494a-a73f-6c6686893d3a"
+                href="https://www.agoda.com/id-id/bumi-senyiur-hotel/hotel/samarinda-id.html?finalPriceView=0&amp;isShowMobileAppPrice=false&amp;cid=1830697&amp;tag=1068_102c93fb1efde0eb216eb0e9c0a1e4&amp;numberOfBedrooms=&amp;familyMode=false&amp;isAgMse=false&amp;ccallout=false&amp;defdate=false&amp;voucherMode=false&amp;adults=2&amp;children=0&amp;rooms=1&amp;maxRooms=9&amp;checkIn=2020-11-19&amp;childAges=&amp;defaultChildAge=8&amp;travellerType=1&amp;tspTypes=2,8&amp;los=1&amp;searchrequestid=34bcc6cc-f9a8-494a-a73f-6c6686893d3a"
                 data-element-name="personalized-recommendations-hotel-card" data-element-index="0"
                 data-element-value="90145" data-recommendation-type="4" data-suggestion-type="1">
                 <div class="RecommendedPropertyCard__Image"
