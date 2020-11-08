@@ -20,6 +20,8 @@ class CreateKavesTable extends Migration
             $table->string('jam_buka');
             $table->text('deskripsi');
             $table->string('gambar');
+            $table->double('lat');
+            $table->double('lng');
             $table->timestamps();
         });
     }

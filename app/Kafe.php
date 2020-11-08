@@ -9,6 +9,6 @@ class Kafe extends Model
     protected $table = 'kafe';
 
     protected $fillable = [
-        'nama', 'alamat', 'jam_buka', 'deskripsi', 'gambar'
+        'nama', 'alamat', 'jam_buka', 'deskripsi', 'gambar', 'lat', 'lng'
     ];
 }
