@@ -62,20 +62,19 @@
         <section id="itinerary" class="tab-content  layout-above" style="display:none">
           <article>
             <h2>Info Lokasi</h2>
-            <div class="description">
-              <div class="text-wrap">
-                <ul>
-                  <li>Alamat : {{ $kafe->alamat }}</li>
-                  <li>Latitude : {{ $kafe->lat }}</li>
-                  <li>Longitude : {{ $kafe->lng }}</li>
-                </ul>
-              </div>
-            </div>
+            <div id="location-map" style="width: 100%; height: 240px"></div>
+            <br>
+            <p>
+              <ul>
+                <li>Alamat : {{ $kafe->lokasi }}</li>
+                <li>Latitude : {{ $kafe->lat }}</li>
+                <li>Longitude : {{ $kafe->lng }}</li>
+              </ul>
+            </p>
             <h6>Jarak dari bandara (Bandara Internasional Aji Pangeran Tumenggung Pranoto)</h6>
             <p>±10 km</p>
             <h6>Estimasi perjalanan (Menggunakan Kendaraan)</h6>
             <p>±5 menit</p>
-            <div id="location-map" style="width: 100%; height: 500px"></div>
           </article>
         </section>
         <section id="reviews" class="tab-content  layout-above" style="display:none">
@@ -163,7 +162,6 @@
     function initMap() {
       var lat = '{{ $kafe->lat }}';
       var lng = '{{ $kafe->lng }}';
-
 
       var map = new google.maps.Map(document.getElementById('location-map'), {
         center: new google.maps.LatLng(lat, lng),
