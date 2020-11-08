@@ -173,23 +173,6 @@
         map,
         position: new google.maps.LatLng(lat, lng)
       });
-
-      var hotels = [
-        {lat: -0.502999, lng: 117.1498923},
-        {lat: -0.5026361, lng: 117.1526781},
-        {lat: -0.4994576, lng: 117.1467443}
-      ];
-
-      var hotelMap = new google.maps.Map(document.getElementById('hotel-map'), {
-        center: new google.maps.LatLng(hotels[0].lat, hotels[0].lng),
-        zoom: 15
-      });
-      hotels.forEach(function(hotel) {
-        new google.maps.Marker({
-          map: hotelMap,
-          position: new google.maps.LatLng(hotel.lat, hotel.lng)
-        })
-      });
     }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3Sis_MBeaSHRKlZIPftutQTXQgz5_m8c&callback=initMap">
