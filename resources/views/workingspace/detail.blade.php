@@ -58,7 +58,7 @@
         <section id="itinerary" class="tab-content  layout-above" style="display:none">
           <article>
             <h2>Info Lokasi</h2>
-            <div id="location-map" style="width: 100%; height: 240px"></div>
+            <div id="location-map" style="width: 100%; height: 320px"></div>
             <br>
             <p>
               <ul>

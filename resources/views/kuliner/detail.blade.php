@@ -45,7 +45,7 @@
           <article>
             <h2>Lokasi Ditemukan</h2>
 
-            <div id="kuliner-map" style="width: 100%; height: 240px; margin-bottom: 10px"></div>
+            <div id="kuliner-map" style="width: 100%; height: 320px; margin-bottom: 10px"></div>
 
             <div class="Tu970R9Q _1FPHoAYb">
               <div class="_1m-zmplc _2dSbfHm2">
