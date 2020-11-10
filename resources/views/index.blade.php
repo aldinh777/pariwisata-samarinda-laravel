@@ -149,7 +149,7 @@
 </div>
 
 <div class="main">
-  <div class="wrap">
+  <div class="wrap" style="padding: 0px">
     <section>
       <article>
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824355992">
@@ -173,7 +173,7 @@
             </div>
           </div>
         </div>
-        <div class="vc_row wpb_row vc_row-fluid">
+        <div class="vc_row wpb_row vc_row-fluid" style="padding: 0 15px">
           <div class="wpb_column vc_column_container vc_col-sm-12">
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
@@ -218,7 +218,7 @@
             </div>
           </div>
         </div>
-        <div class="vc_row-full-width vc_clearfix"></div>
+        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824652572">
           <div class="wpb_column vc_column_container vc_col-sm-3">
             <div class="vc_column-inner">
@@ -239,7 +239,7 @@
             </div>
           </div>
         </div>
-        <div class="vc_row wpb_row vc_row-fluid">
+        <div class="vc_row wpb_row vc_row-fluid" style="padding: 0px 15px">
           @foreach ($kuliner_all as $kuliner)
           <div class="wpb_column vc_column_container vc_col-sm-3">
             <div class="vc_column-inner">
