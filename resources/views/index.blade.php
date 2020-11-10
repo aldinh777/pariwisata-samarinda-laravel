@@ -86,7 +86,9 @@
     color: #ffffff;
   }
 </style>
+
 <div class="mainx">
+  <div class="vc_row-full-width vc_clearfix" style="height: 10px;"></div>
   <div class="containerx">
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -152,6 +154,7 @@
   <div class="wrap" style="padding: 0px">
     <section>
       <article>
+        <!-- Rekomendasi Wisata -->
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824355992">
           <div class="wpb_column vc_column_container vc_col-sm-3">
             <div class="vc_column-inner">
@@ -219,6 +222,8 @@
           </div>
         </div>
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+
+        <!-- Rekomendasi Kuliner -->
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824652572">
           <div class="wpb_column vc_column_container vc_col-sm-3">
             <div class="vc_column-inner">
@@ -268,8 +273,16 @@
           </div>
           @endforeach
         </div>
-        <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
-          class="vc_row wpb_row vc_row-fluid vc_custom_1557848166265 vc_row-has-fill">
+        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+
+        <!-- Banner -->
+        <div style="text-align: center; min-height: 320px; margin-top: 10px; padding: 20px">
+          <img src="https://st3.depositphotos.com/2100659/33242/v/1600/depositphotos_332426834-stock-illustration-mega-sale-concept-horizontal-banner.jpg" alt="" style="height: 100%; width: auto; object-fit: contain">
+        </div>
+        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+
+        <!-- Rekomendasi Oleh-Oleh -->
+        <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824652572">
           <div class="wpb_column vc_column_container vc_col-sm-3">
             <div class="vc_column-inner">
               <div class="wpb_wrapper"></div>
@@ -278,19 +291,8 @@
           <div class="wpb_column vc_column_container vc_col-sm-6">
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
-                <div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_zoomInUp zoomInUp">
-                  <div class="wpb_wrapper">
-                    <h5 style="text-align: center;"><span style="color: #ffffff;">“I decided
-                        to go skydiving with Travel &amp; Tours, and it was the best
-                        decision I ever made. I felt really safe all the time, and it
-                        was evident that everyone involved were true professionals. This
-                        made my trip to Europe unforgettable!”</span></h5>
-                    <p style="text-align: center;"><span style="color: #ffffff;"><strong>&#8211;
-                          Jorge B.</strong></span>
-                    </p>
-
-                  </div>
-                </div>
+                <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824467886">
+                  Rekomendasi Oleh-Oleh</h1>
               </div>
             </div>
           </div>
@@ -300,7 +302,182 @@
             </div>
           </div>
         </div>
-        <div class="vc_row-full-width vc_clearfix"></div>
+        <div class="vc_row wpb_row vc_row-fluid" style="padding: 0px 15px">
+          @foreach ($oleholeh_all as $oleholeh)
+          <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper">
+                <div class="widget widget-sidebar ">
+                  <article class="location_item single-card">
+                    <div><a href="/oleholeh/{{ $oleholeh->id }}" title="{{ $oleholeh->nama }}">
+                        <figure><img src="{{ $oleholeh->gambar }}"
+                            class="attachment-thumbnail size-thumbnail wp-post-image" loading="lazy" title="sq3"
+                            style="min-width: 200px; height: 200px;" /></figure>
+                      </a>
+                      <div class="details hide-actions hide-description hide-counts ">
+                        <div class='item-header'>
+                          <h3><a href="/oleholeh/{{ $oleholeh->id }}"
+                              title="{{ $oleholeh->nama }}">{{ $oleholeh->nama }}</a></h3>
+                        </div>
+                        <!--ribbon-->
+                      </div>
+                      <!--//details--><a href="/oleholeh/{{ $oleholeh->id }}" class="overlay-link"></a>
+                    </div>
+                  </article>
+                  <!--//location_item-->
+                </div>
+              </div>
+            </div>
+          </div>
+          @endforeach
+        </div>
+        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+
+        <!-- Rekomendasi Kafe -->
+        <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824355992">
+          <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper"></div>
+            </div>
+          </div>
+          <div class="wpb_column vc_column_container vc_col-sm-6">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper">
+                <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824316629">
+                  Rekomendasi Kafe
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper"></div>
+            </div>
+          </div>
+        </div>
+        <div class="vc_row wpb_row vc_row-fluid" style="padding: 0 15px">
+          <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper">
+                <div class="widget widget-sidebar ">
+                  <div class="s-title">
+                    <h2></h2>
+                  </div>
+                  <div class="deals">
+                    <div class="row">
+                      @foreach ($kafe_all as $kafe)
+                      <article data-tour-id="{{ $kafe->id }}" class="tour_item one-fourth ">
+                        <div>
+                          <a href="/kafe/{{ $kafe->id }}" title="{{ $kafe->nama }}">
+                            <figure>
+                              <img src="{{ $kafe->gambar }}" class="attachment-thumbnail size-thumbnail wp-post-image"
+                                style="width: 360px; height: 200px" alt="" loading="lazy" title="{{ $kafe->nama }}" />
+                            </figure>
+                          </a>
+                          <div class="details ">
+                            <div class='item-header'>
+                              <h3><a href="/kafe/{{ $kafe->id }}"
+                                  title="{{ $kafe->nama }}">{{ $kafe->nama }}</a></h3>
+                              <span class="address"> {{ $kafe->lokasi }} </span>
+                            </div>
+                            <div class='description'>
+                              <p>Jam Buka : {{ $kafe->jam_buka }}</p>
+                            </div>
+                            <div class='actions'><a href='/kafe/{{ $kafe->id }}' class='gradient-button edit-entity'
+                                data-id='436' title='Lebih Lanjut'>Lebih Lanjut</a>
+                            </div>
+                          </div>
+                          <!--//details--><a href="/kafe/{{ $kafe->id }}" class="overlay-link"></a>
+                        </div>
+                      </article>
+                      @endforeach
+                    </div>
+                    <!--row-->
+                  </div>
+                  <!--deals-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+
+        <!-- Banner -->
+        <div style="text-align: center; min-height: 320px; margin-top: 10px; padding: 20px">
+          <img src="https://st4.depositphotos.com/6188090/19830/v/1600/depositphotos_198308926-stock-illustration-super-sale-discount-horizontal-banner.jpg" alt="" style="height: 100%; width: auto; object-fit: contain">
+        </div>
+        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+
+        <!-- Rekomendasi workingspace -->
+        <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824355992">
+          <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper"></div>
+            </div>
+          </div>
+          <div class="wpb_column vc_column_container vc_col-sm-6">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper">
+                <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824316629">
+                  Rekomendasi Workingspace
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper"></div>
+            </div>
+          </div>
+        </div>
+        <div class="vc_row wpb_row vc_row-fluid" style="padding: 0 15px">
+          <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper">
+                <div class="widget widget-sidebar ">
+                  <div class="s-title">
+                    <h2></h2>
+                  </div>
+                  <div class="deals">
+                    <div class="row">
+                      @foreach ($workingspace_all as $workingspace)
+                      <article data-tour-id="{{ $workingspace->id }}" class="tour_item one-fourth ">
+                        <div>
+                          <a href="/workingspace/{{ $workingspace->id }}" title="{{ $workingspace->nama }}">
+                            <figure>
+                              <img src="{{ $workingspace->gambar }}" class="attachment-thumbnail size-thumbnail wp-post-image"
+                                style="width: 360px; height: 200px" alt="" loading="lazy" title="{{ $workingspace->nama }}" />
+                            </figure>
+                          </a>
+                          <div class="details ">
+                            <div class='item-header'>
+                              <h3><a href="/workingspace/{{ $workingspace->id }}"
+                                  title="{{ $workingspace->nama }}">{{ $workingspace->nama }}</a></h3>
+                              <span class="address"> {{ $workingspace->lokasi }} </span>
+                            </div>
+                            <div class='description'>
+                              <p>Jam Buka : {{ $workingspace->jam_buka }}</p>
+                            </div>
+                            <div class='actions'><a href='/workingspace/{{ $workingspace->id }}' class='gradient-button edit-entity'
+                                data-id='436' title='Lebih Lanjut'>Lebih Lanjut</a>
+                            </div>
+                          </div>
+                          <!--//details--><a href="/workingspace/{{ $workingspace->id }}" class="overlay-link"></a>
+                        </div>
+                      </article>
+                      @endforeach
+                    </div>
+                    <!--row-->
+                  </div>
+                  <!--deals-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+        <div class="vc_row-full-width vc_clearfix" style="height: 10px"></div>
+
       </article>
     </section>
   </div>

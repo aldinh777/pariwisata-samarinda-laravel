@@ -3,10 +3,14 @@
 @section("title", "Kafe Kota Samarinda")
 
 @section("content")
+<div style="text-align: center; min-height: 320px">
+  <img src="https://st3.depositphotos.com/2100659/33242/v/1600/depositphotos_332426834-stock-illustration-mega-sale-concept-horizontal-banner.jpg" alt="" style="height: 100%; width: auto">
+</div>
+
 <div class="main">
   <div class="wrap">
     <div class="row">
-      <section>
+      <section>        
         <article class="post-46 page type-page status-publish hentry" id="page-46">
           <h1 class="page-title">Kafe Kota Samarinda</h1>
         </article>

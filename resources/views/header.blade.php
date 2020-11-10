@@ -36,6 +36,9 @@
       padding: 0 !important;
     }
 
+    .page-title {
+      text-align: center;
+    }
   </style>
   <link rel='stylesheet' id='wp-block-library-css'
     href='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-includes/css/dist/block-library/style.min.css?ver=4b70993e99f0b789181420799b3b6c39'
@@ -913,7 +916,7 @@
   </div>
   <div class="page-wrap">
     <!--header-->
-    <header class="header header2">
+    <header class="header header2" style="position: fixed">
       <div class="wrap">
         <!--logo-->
         <div class="logo">
@@ -988,11 +991,11 @@
       <!--//wrap-->
     </header>
     <!--//header-->
-    <div class="byt-widget-search-inner" style="background-color:#003580;color:#ffffff;width:100%; text-align: left">
+    <div class="byt-widget-search-inner" style="background-color:#003580;color:#ffffff;width:100%; margin-top: 81px">
       <form class="widget-search" method="get" action="/wisata/filter">
         <div class="block block-1 full-width block-order-1">
           <div class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select filter-tour"
-            style="width: 400px">
+            style="width: 80%">
             <div class="select">
               <input type="text" id="hl_0_l" name="key" value="" placeholder="Temukan Tujuan Wisata" />
             </div>
@@ -1001,7 +1004,7 @@
             class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select full-width  filter-tour">
 
           </div> -->
-          <div class="filter filter-block-1 filter-order-10 filter-type-submit">
+          <div class="filter filter-block-1 filter-order-10 filter-type-submit" style="width: 20%">
             <input type="submit" value="Telusuri" class="gradient-button" id="bookyourtravel_search_widget-1_search-submit">
           </div>
         </div>

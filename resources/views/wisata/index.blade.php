@@ -1,10 +1,12 @@
 @extends("header")
 
-@include("search")
-
 @section("title", "Wisata Kota Samarinda")
 
 @section("content")
+<div style="text-align: center; min-height: 320px">
+  <img src="https://st3.depositphotos.com/2100659/33242/v/1600/depositphotos_332426834-stock-illustration-mega-sale-concept-horizontal-banner.jpg" alt="" style="height: 100%; width: auto">
+</div>
+
 <div class="main">
   <div class="wrap">
     <div class="row">
