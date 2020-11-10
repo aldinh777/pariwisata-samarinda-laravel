@@ -62,7 +62,7 @@
             <br>
             <p>
               <ul>
-                <li>Alamat : {{ $workingspace->lokasi }}</li>
+                <li>Alamat : {{ $workingspace->alamat }}</li>
                 <li>Latitude : {{ $workingspace->lat }}</li>
                 <li>Longitude : {{ $workingspace->lng }}</li>
               </ul>

@@ -68,7 +68,7 @@
             <br>
             <p>
               <ul>
-                <li>Alamat : {{ $kafe->lokasi }}</li>
+                <li>Alamat : {{ $kafe->alamat }}</li>
                 <li>Latitude : {{ $kafe->lat }}</li>
                 <li>Longitude : {{ $kafe->lng }}</li>
               </ul>

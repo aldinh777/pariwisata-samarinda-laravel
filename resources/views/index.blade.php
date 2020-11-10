@@ -276,8 +276,8 @@
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
 
         <!-- Banner -->
-        <div style="text-align: center; min-height: 320px; margin-top: 10px; padding: 20px">
-          <img src="https://st3.depositphotos.com/2100659/33242/v/1600/depositphotos_332426834-stock-illustration-mega-sale-concept-horizontal-banner.jpg" alt="" style="height: 100%; width: auto; object-fit: contain">
+        <div style="text-align: center; margin-top: 10px; padding: 20px">
+          <img src="https://st3.depositphotos.com/2100659/33242/v/1600/depositphotos_332426834-stock-illustration-mega-sale-concept-horizontal-banner.jpg" alt="" style="object-fit: contain">
         </div>
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
 
@@ -403,8 +403,8 @@
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
 
         <!-- Banner -->
-        <div style="text-align: center; min-height: 320px; margin-top: 10px; padding: 20px">
-          <img src="https://st4.depositphotos.com/6188090/19830/v/1600/depositphotos_198308926-stock-illustration-super-sale-discount-horizontal-banner.jpg" alt="" style="height: 100%; width: auto; object-fit: contain">
+        <div style="text-align: center; margin-top: 10px; padding: 20px">
+          <img src="https://st4.depositphotos.com/6188090/19830/v/1600/depositphotos_198308926-stock-illustration-super-sale-discount-horizontal-banner.jpg" alt="" style="object-fit: contain">
         </div>
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
 
