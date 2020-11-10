@@ -271,6 +271,5 @@
       });
     }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3Sis_MBeaSHRKlZIPftutQTXQgz5_m8c&callback=initMap"></script>
 </div>
 @endsection

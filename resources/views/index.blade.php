@@ -39,79 +39,11 @@
     <li class="widget widget-sidebar full-width">
       <!-- START TravelTours REVOLUTION SLIDER 6.2.17 -->
       <p class="rs-p-wp-fix"></p>
-      <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery"
-        style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
-        <rs-module id="rev_slider_1_1" style="" data-version="6.2.17">
-          <rs-slides>
-            <rs-slide data-key="rs-1" data-title="Slide" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-              <img src="/img/islamic-center.jpg" title="Home Travel Tours"
-                data-panzoom="d:40000;ss:100;se:150;" class="rev-slidebg" data-no-retina>
-              <!--
-							-->
-              <rs-layer id="slider-1-slide-1-layer-1" data-type="text" data-rsp_ch="on"
-                data-xy="x:c;y:t,t,m,m;yo:165px,165px,-30px,-30px;"
-                data-text="s:51;l:51;fw:600;a:center;" data-frame_0="tp:600;"
-                data-frame_1="tp:600;st:0;" data-frame_999="o:0;tp:600;st:w;sR:8700;"
-                style="z-index:5;font-family:Montserrat;">Mau pergi kemana yang mulia?
-              </rs-layer>
-              <!--
-
-							-->
-              <rs-layer id="slider-1-slide-1-layer-2" data-type="text"
-                data-color="rgba(255, 255, 255, 0.85)" data-rsp_ch="on"
-                data-xy="x:c;y:t,t,m,m;yo:220px,220px,10px,10px;" data-text="l:20;a:center;"
-                data-frame_0="tp:600;" data-frame_1="tp:600;st:0;"
-                data-frame_999="o:0;tp:600;st:w;sR:8700;" style="z-index:6;font-family:Montserrat;">
-                Nikmati indahnya kota samarinda
-                layaknya seorang raja
-              </rs-layer>
-              <!---->
-            </rs-slide>
-          </rs-slides>
-        </rs-module>
-        <script type="text/javascript">
-          setREVStartSize({
-            c: 'rev_slider_1_1',
-            rl: [1240, 1240, 778, 778],
-            el: [],
-            gw: [1240, 1240, 778, 778],
-            gh: [600, 600, 300, 300],
-            type: 'standard',
-            justify: '',
-            layout: 'fullwidth',
-            mh: "0"
-          });
-          var revapi1,
-            tpj;
-          jQuery(function () {
-            tpj = jQuery;
-            revapi1 = tpj("#rev_slider_1_1");
-            if (revapi1 == undefined || revapi1.revolution == undefined) {
-              revslider_showDoubleJqueryError("rev_slider_1_1");
-            } else {
-              revapi1.revolution({
-                sliderLayout: "fullwidth",
-                visibilityLevels: "1240,1240,778,778",
-                gridwidth: "1240,1240,778,778",
-                gridheight: "600,600,300,300",
-                perspectiveType: "local",
-                responsiveLevels: "1240,1240,778,778",
-                progressBar: {
-                  disableProgressBar: true
-                },
-                navigation: {
-                  onHoverStop: false
-                },
-                fallbacks: {
-                  allowHTML5AutoPlayOnAndroid: true
-                },
-              });
-            }
-
-          });
-
-        </script>
-      </rs-module-wrap>
+      <div class="carousel-slick-slider">
+        <div>content 1</div>
+        <div>content 2</div>
+        <div>content 3</div>
+      </div>
       <!-- END REVOLUTION SLIDER -->
     </li>
   </ul>

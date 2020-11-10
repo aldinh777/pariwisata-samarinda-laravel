@@ -12,173 +12,12 @@
 
   <link rel="stylesheet" href="https://static.tacdn.com/assets/Cp9bdC.GjqwwlRa.css">
 
-  <script src='https://www.google.com/recaptcha/api.js'></script>
   <title>@yield("title")</title>
-  <link rel='dns-prefetch' href='//maps.google.com' />
-  <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-  <link rel='dns-prefetch' href='//s.w.org' />
   <link rel="alternate" type="application/rss+xml" title="Travel &amp; Tours &raquo; Feed"
     href="https://themes.themeenergy.com/bookyourtravel/travel-tours/feed/" />
   <link rel="alternate" type="application/rss+xml" title="Travel &amp; Tours &raquo; Comments Feed"
     href="https://themes.themeenergy.com/bookyourtravel/travel-tours/comments/feed/" />
   <!-- This site uses the Google Analytics by MonsterInsights plugin v7.12.3 - Using Analytics tracking - https://www.monsterinsights.com/ -->
-  <script type="text/javascript" data-cfasync="false">
-    (window.gaDevIds = window.gaDevIds || []).push("dZGIzZG");
-    var mi_version = '7.12.3';
-    var mi_track_user = true;
-    var mi_no_track_reason = '';
-
-    var disableStr = 'ga-disable-UA-136871892-1';
-
-    /* Function to detect opted out users */
-    function __gaTrackerIsOptedOut() {
-      return document.cookie.indexOf(disableStr + '=true') > -1;
-    }
-
-    /* Disable tracking if the opt-out cookie exists. */
-    if (__gaTrackerIsOptedOut()) {
-      window[disableStr] = true;
-    }
-
-    /* Opt-out function */
-    function __gaTrackerOptout() {
-      document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-      window[disableStr] = true;
-    }
-
-    if ('undefined' === typeof gaOptout) {
-      function gaOptout() {
-        __gaTrackerOptout();
-      }
-    }
-
-    if (mi_track_user) {
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', '__gaTracker');
-
-      __gaTracker('create', 'UA-136871892-1', 'auto');
-      __gaTracker('set', 'forceSSL', true);
-      __gaTracker('require', 'displayfeatures');
-      __gaTracker('require', 'linkid', 'linkid.js');
-      __gaTracker('send', 'pageview');
-    } else {
-      console.log("");
-      (function () {
-        /* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
-        var noopfn = function () {
-          return null;
-        };
-        var noopnullfn = function () {
-          return null;
-        };
-        var Tracker = function () {
-          return null;
-        };
-        var p = Tracker.prototype;
-        p.get = noopfn;
-        p.set = noopfn;
-        p.send = noopfn;
-        var __gaTracker = function () {
-          var len = arguments.length;
-          if (len === 0) {
-            return;
-          }
-          var f = arguments[len - 1];
-          if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
-            console.log('Not running function __gaTracker(' + arguments[0] +
-              " ....) because you are not being tracked. " + mi_no_track_reason);
-            return;
-          }
-          try {
-            f.hitCallback();
-          } catch (ex) {
-
-          }
-        };
-        __gaTracker.create = function () {
-          return new Tracker();
-        };
-        __gaTracker.getByName = noopnullfn;
-        __gaTracker.getAll = function () {
-          return [];
-        };
-        __gaTracker.remove = noopfn;
-        window['__gaTracker'] = __gaTracker;
-      })();
-    }
-
-  </script>
-  <!-- / Google Analytics by MonsterInsights -->
-  <script type="text/javascript">
-    window._wpemojiSettings = {
-      "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/",
-      "ext": ".png",
-      "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/",
-      "svgExt": ".svg",
-      "source": {
-        "concatemoji": "https:\/\/themes.themeenergy.com\/bookyourtravel\/travel-tours\/wp-includes\/js\/wp-emoji-release.min.js?ver=4b70993e99f0b789181420799b3b6c39"
-      }
-    };
-    ! function (e, a, t) {
-      var r, n, o, i, p = a.createElement("canvas"),
-        s = p.getContext && p.getContext("2d");
-
-      function c(e, t) {
-        var a = String.fromCharCode;
-        s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0);
-        var r = p.toDataURL();
-        return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL()
-      }
-
-      function l(e) {
-        if (!s || !s.fillText) return !1;
-        switch (s.textBaseline = "top", s.font = "600 32px Arial", e) {
-          case "flag":
-            return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356,
-              56826, 55356, 56819
-            ], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418,
-              56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447
-            ], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203,
-              56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447
-            ]));
-          case "emoji":
-            return !c([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212])
-        }
-        return !1
-      }
-
-      function d(e) {
-        var t = a.createElement("script");
-        t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
-      }
-      for (i = Array("flag", "emoji"), t.supports = {
-          everything: !0,
-          everythingExceptFlag: !0
-        }, o = 0; o < i.length; o++) t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports
-        .everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports
-          .everythingExceptFlag && t.supports[i[o]]);
-      t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t
-        .readyCallback = function () {
-          t.DOMReady = !0
-        }, t.supports.everything || (n = function () {
-          t.readyCallback()
-        }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load",
-          n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () {
-          "complete" === a.readyState && t.readyCallback()
-        })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji),
-          d(r.wpemoji)))
-    }(window, document, window._wpemojiSettings);
-
-  </script>
   <style type="text/css">
     img.wp-smiley,
     img.emoji {
@@ -270,18 +109,6 @@
   <script type='text/javascript'
     src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'
     id='jquery-core-js'></script>
-  <script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
-    /* <![CDATA[ */
-    var monsterinsights_frontend = {
-      "js_events_tracking": "true",
-      "download_extensions": "doc,pdf,ppt,zip,xls,docx,pptx,xlsx",
-      "inbound_paths": "[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]",
-      "home_url": "https:\/\/themes.themeenergy.com\/bookyourtravel\/travel-tours",
-      "hash_tracking": "false"
-    };
-    /* ]]> */
-
-  </script>
   <script type='text/javascript'
     src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.12.3'
     id='monsterinsights-frontend-script-js'></script>
@@ -307,12 +134,6 @@
     /* ]]> */
 
   </script>
-  <script type='text/javascript'
-    src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4.5.2'
-    id='wc-add-to-cart-js'></script>
-  <script type='text/javascript'
-    src='https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=6.2.0'
-    id='vc_woocommerce-add-to-cart-js-js'></script>
   <!-- OG: 2.8.7 -->
   <meta property="og:image"
     content="https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/uploads/sites/26/2019/04/cropped-favicon.png" />
@@ -1488,8 +1309,8 @@
         id='mc4wp-forms-api-js'></script>
     </div>
   </div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3Sis_MBeaSHRKlZIPftutQTXQgz5_m8c&callback=initMap">
+  </script>
   <!--//page-wrap-->
-
-</body>
-
+  </body>
 </html>
