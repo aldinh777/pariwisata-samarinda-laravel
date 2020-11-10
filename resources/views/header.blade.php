@@ -690,6 +690,9 @@
       background-color: #f8f8f8;
     }
 
+    .header {
+      margin-bottom: 0px;
+    }
   </style>
   <meta name="generator"
     content="Powered by Slider Revolution 6.2.17 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
@@ -922,10 +925,10 @@
         </div>
         <!--//logo-->
         <!--contact-->
-        <div class="contact">
-          <span class="message">Contact Person:</span>
+        <div class="contact" style="opacity: 0; visibility: hidden">
+          <!-- <span class="message">Contact Person:</span>
 
-          <span class="number">0822-3980-8869</span>
+          <span class="number">0822-3980-8869</span> -->
         </div>
         <!--//contact-->
         <div class="minicart">
@@ -985,6 +988,9 @@
       <!--//wrap-->
     </header>
     <!--//header-->
+    @section("search")
+    @show
+
     @section("content")
     @show
     <!--// .wrap -->

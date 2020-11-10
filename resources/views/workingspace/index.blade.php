@@ -1,5 +1,7 @@
 @extends("header")
 
+@include("search")
+
 @section("title", "Working Space Kota Samarinda")
 
 @section("content")

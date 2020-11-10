@@ -28,7 +28,7 @@ Route::get('/oleholeh', [OlehOlehController::class, 'list']);
 Route::get('/workingspace', [WorkingSpaceController::class, 'list']);
 
 Route::get('/wisata/filter', function() {
-  return abort(404);
+  return redirect('/wisata');
 });
 
 Route::get('/wisata/{id}', [WisataController::class, 'detail']);

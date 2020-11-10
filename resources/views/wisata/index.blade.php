@@ -1,35 +1,11 @@
 @extends("header")
 
+@include("search")
+
 @section("title", "Wisata Kota Samarinda")
 
 @section("content")
-<div class="byt-widget-search-inner" style="background-color:#003580;color:#ffffff;width:100%; text-align: left">
-  <form class="widget-search" method="get" action="/wisata/filter">
-    <div class="block block-1 full-width block-order-1">
-      <div class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select filter-tour"
-        style="width: 400px">
-        <div class="select">
-          <label for="l_bookyourtravel_search_widget-1_0_l">Cari</label>
-          <input type="text" id="hl_0_l" name="key" value="" />
-        </div>
-      </div>
-      <div
-        class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select full-width  filter-tour">
-
-      </div>
-      <div class="filter filter-block-1 filter-order-10 filter-type-submit">
-        <input type="submit" value="Telusuri" class="gradient-button" id="bookyourtravel_search_widget-1_search-submit">
-      </div>
-    </div>
-  </form>
-</div>
-
 <div class="main">
-  <style>
-    .header {
-      margin-bottom: 0px;
-    }
-  </style>
   <div class="wrap">
     <div class="row">
       <section class="">
