@@ -3,51 +3,151 @@
 @section("title", "Pariwisata Samarinda")
 
 @section("content")
-<div id="hero-sidebar" class="hero-sidebar widget-area">
-  <ul>
-    <li class="widget widget-sidebar full-width">
-      <article class="byt-widget-search hCenter vBottom dOver " style=padding-top:160px;padding-bottom:160px;>
-        <div class="byt-widget-search-inner" style=width:45%;>
-          <form class="widget-search" method="get"
-            action="https://themes.themeenergy.com/bookyourtravel/travel-tours/search-results/">
-            <div class="block block-1 full-width block-order-1">
-              <div style="display:none;"
-                class="filter filter-block-1 filter-order-1 filter-type-what one-sixth"><span
-                  class="label">What?</span>
-                <div class='radio-wrap'><input checked type="radio"
-                    id="bookyourtravel_search_widget-2-what-tour" name="what" value="4"><label
-                    for="bookyourtravel_search_widget-2-what-tour">Tour</label></div>
-              </div>
-              <div
-                class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select three-fourth  filter-tour">
-                <div class="select"><label for="l_bookyourtravel_search_widget-2_0_l"></label><input
-                    type="hidden" id="hl_0_l" name="hl0l" value=""><select class="filter-locations"
-                    data-relid="hl_0_l" id="l_bookyourtravel_search_widget-2_0_l" name="l">
-                    <option value=""></option>
-                    <option value="kota">Samarinda Kota</option>
-                    <option value="seberang">Samarinda Seberang</option>
-                  </select></div>
-              </div>
-              <div class="filter filter-block-1 filter-order-10 filter-type-submit one-fourth">
-                <input type='submit' value='Cari' class='gradient-button'
-                  id='bookyourtravel_search_widget-2_search-submit' /></div>
-            </div>
-          </form>
+
+<style>
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .mainx {
+      display: none;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .swiper-mobile {
+      display: none;
+    }
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .swiper-mobile {
+      display: none;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .swiper-mobile {
+      display: none;
+    }
+  }
+
+  .containerx {
+    max-width: 99rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .arrow-icon::before {
+    content: none;
+  }
+
+  .mainx .container .swiper-container .swiper-wrapper .swiper-slide .card-image {
+    background: #ffffff;
+    border: none;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+  }
+
+  .mainx .container .swiper-container .swiper-wrapper .swiper-slide .card-image img {
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .mainx .container .swiper-container .swiper-pagination-bullet {
+    opacity: 0.8;
+    background: #252a32;
+  }
+
+  .mainx .container .swiper-container .swiper-pagination-bullet-active {
+    background: #ffffff;
+  }
+
+  .mainx .container .swiper-container .swiper-button-next,
+  .mainx .container .swiper-container .swiper-button-prev {
+    background-image: none;
+    background-size: 0;
+    background-repeat: no-repeat;
+    background-position: 0;
+    margin-top: -1rem;
+  }
+
+  .mainx .container .swiper-container .swiper-button-next .arrow-icon,
+  .mainx .container .swiper-container .swiper-button-prev .arrow-icon {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+</style>
+<div class="mainx">
+  <div class="containerx">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/1280x720/?nature" alt="Image Slider">
+          </div>
         </div>
-      </article>
-    </li>
-    <li class="widget widget-sidebar full-width">
-      <!-- START TravelTours REVOLUTION SLIDER 6.2.17 -->
-      <p class="rs-p-wp-fix"></p>
-      <div class="carousel-slick-slider">
-        <div>content 1</div>
-        <div>content 2</div>
-        <div>content 3</div>
+        <div class="swiper-slide">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/1280x720/?nature,water,animal" alt="Image Slider">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/1280x720/?water" alt="Image Slider">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/1280x720/?animal" alt="Image Slider">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/1280x720/?travel" alt="Image Slider">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-image">
+            <img src="https://source.unsplash.com/1280x720/?flower" alt="Image Slider">
+          </div>
+        </div>
       </div>
-      <!-- END REVOLUTION SLIDER -->
-    </li>
-  </ul>
-</div><!-- #hero -->
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Scrollbar -->
+      <div class="swiper-button-next">
+        <i class="fas fa-chevron-circle-right arrow-icon"></i>
+      </div>
+      <div class="swiper-button-prev">
+        <i class="fas fa-chevron-circle-left arrow-icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="swiper-mobile" style="width: 100%; height: 320px; overflow: hidden">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"
+      style="background: url('/img/islamic-center.jpg'); background-position: center; background-size: cover">
+    </div>
+    <div class="swiper-slide"
+      style="background: url('https://kaltimtoday.co/wp-content/uploads/2019/09/zAIRIN-sAROWON.jpeg'); background-position: center; background-size: cover">
+    </div>
+    <div class="swiper-slide"
+      style="background: url('https://akcdn.detik.net.id/visual/2020/07/06/naruto-1_169.png?w=650'); background-position: center; background-size: cover">
+    </div>
+  </div>
+</div>
+
 <div class="main">
   <div class="wrap">
     <section>
@@ -61,8 +161,8 @@
           <div class="wpb_column vc_column_container vc_col-sm-6">
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
-                <h1 style="font-size: 37px;text-align: center"
-                  class="vc_custom_heading vc_custom_1557824316629">Rekomendasi Pariwisata
+                <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824316629">
+                  Rekomendasi Pariwisata
                 </h1>
               </div>
             </div>
@@ -86,13 +186,11 @@
                       @foreach ($wisata_all as $wisata)
                       <article data-tour-id="{{ $wisata->id }}" class="tour_item one-fourth ">
                         <div>
-                          <a href="/wisata/{{ $wisata->id }}"
-                            title="{{ $wisata->nama }}">
+                          <a href="/wisata/{{ $wisata->id }}" title="{{ $wisata->nama }}">
                             <figure>
-                              <img src="{{ $wisata->gambar }}"
-                                class="attachment-thumbnail size-thumbnail wp-post-image"
-                                style="width: 360px; height: 200px" alt=""
-                                loading="lazy" title="{{ $wisata->nama }}" /></figure>
+                              <img src="{{ $wisata->gambar }}" class="attachment-thumbnail size-thumbnail wp-post-image"
+                                style="width: 360px; height: 200px" alt="" loading="lazy" title="{{ $wisata->nama }}" />
+                            </figure>
                           </a>
                           <div class="details ">
                             <div class='item-header'>
@@ -103,15 +201,11 @@
                             <div class='description'>
                               <p>{{ $wisata->deskripsi_singkat }}</p>
                             </div>
-                            <div class='actions'><a
-                                href='/wisata/{{ $wisata->id }}'
-                                class='gradient-button edit-entity' data-id='436'
-                                title='Lebih Lanjut'>Lebih Lanjut</a>
+                            <div class='actions'><a href='/wisata/{{ $wisata->id }}' class='gradient-button edit-entity'
+                                data-id='436' title='Lebih Lanjut'>Lebih Lanjut</a>
                             </div>
                           </div>
-                          <!--//details--><a
-                            href="/wisata/{{ $wisata->id }}"
-                            class="overlay-link"></a>
+                          <!--//details--><a href="/wisata/{{ $wisata->id }}" class="overlay-link"></a>
                         </div>
                       </article>
                       @endforeach
@@ -134,8 +228,8 @@
           <div class="wpb_column vc_column_container vc_col-sm-6">
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
-                <h1 style="font-size: 37px;text-align: center"
-                  class="vc_custom_heading vc_custom_1557824467886">Rekomendasi Kuliner</h1>
+                <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824467886">
+                  Rekomendasi Kuliner</h1>
               </div>
             </div>
           </div>
@@ -152,13 +246,10 @@
               <div class="wpb_wrapper">
                 <div class="widget widget-sidebar ">
                   <article class="location_item single-card">
-                    <div><a href="/kuliner/{{ $kuliner->id }}"
-                        title="{{ $kuliner->nama }}">
-                        <figure><img
-                            src="{{ $kuliner->gambar }}"
-                            class="attachment-thumbnail size-thumbnail wp-post-image"
-                            loading="lazy" title="sq3"
-                            style="min-width: 200px; height: 200px;"/></figure>
+                    <div><a href="/kuliner/{{ $kuliner->id }}" title="{{ $kuliner->nama }}">
+                        <figure><img src="{{ $kuliner->gambar }}"
+                            class="attachment-thumbnail size-thumbnail wp-post-image" loading="lazy" title="sq3"
+                            style="min-width: 200px; height: 200px;" /></figure>
                       </a>
                       <div class="details hide-actions hide-description hide-counts ">
                         <div class='item-header'>
@@ -167,9 +258,7 @@
                         </div>
                         <!--ribbon-->
                       </div>
-                      <!--//details--><a
-                        href="/kuliner/{{ $kuliner->id }}"
-                        class="overlay-link"></a>
+                      <!--//details--><a href="/kuliner/{{ $kuliner->id }}" class="overlay-link"></a>
                     </div>
                   </article>
                   <!--//location_item-->
@@ -189,8 +278,7 @@
           <div class="wpb_column vc_column_container vc_col-sm-6">
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
-                <div
-                  class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_zoomInUp zoomInUp">
+                <div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_zoomInUp zoomInUp">
                   <div class="wpb_wrapper">
                     <h5 style="text-align: center;"><span style="color: #ffffff;">“I decided
                         to go skydiving with Travel &amp; Tours, and it was the best
@@ -217,4 +305,41 @@
     </section>
   </div>
 </div>
+
+<script>
+  // Swiper Configuration
+  var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1.5,
+    spaceBetween: 10,
+    centeredSlides: true,
+    freeMode: true,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      500: {
+        slidesPerView: 1
+      },
+      700: {
+        slidesPerView: 1.5
+      }
+    }
+  });
+
+  var swiperMobile = new Swiper('.swiper-mobile', {
+    direction: 'horizontal',
+    loop: true,
+  });
+</script>
 @endsection

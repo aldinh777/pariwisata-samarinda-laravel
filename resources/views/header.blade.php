@@ -12,6 +12,10 @@
 
   <link rel="stylesheet" href="https://static.tacdn.com/assets/Cp9bdC.GjqwwlRa.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
   <title>@yield("title")</title>
   <link rel="alternate" type="application/rss+xml" title="Travel &amp; Tours &raquo; Feed"
     href="https://themes.themeenergy.com/bookyourtravel/travel-tours/feed/" />
@@ -1309,7 +1313,26 @@
         id='mc4wp-forms-api-js'></script>
     </div>
   </div>
+  <script>
+    try {
+      if (!initMap) {
+        
+      }
+    } catch(error) {} finally {
+      initMap = function() {
+
+      }
+    }
+  </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3Sis_MBeaSHRKlZIPftutQTXQgz5_m8c&callback=initMap">
+  </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.test-slider').slick();
+    });
   </script>
   <!--//page-wrap-->
   </body>
