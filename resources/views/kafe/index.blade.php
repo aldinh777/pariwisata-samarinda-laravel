@@ -1,7 +1,5 @@
 @extends("header")
 
-@include("search")
-
 @section("title", "Kafe Kota Samarinda")
 
 @section("content")

@@ -988,9 +988,26 @@
       <!--//wrap-->
     </header>
     <!--//header-->
-    @section("search")
-    @show
+    <div class="byt-widget-search-inner" style="background-color:#003580;color:#ffffff;width:100%; text-align: left">
+      <form class="widget-search" method="get" action="/wisata/filter">
+        <div class="block block-1 full-width block-order-1">
+          <div class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select filter-tour"
+            style="width: 400px">
+            <div class="select">
+              <input type="text" id="hl_0_l" name="key" value="" placeholder="Temukan Tujuan Wisata" />
+            </div>
+          </div>
+          <!-- <div
+            class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select full-width  filter-tour">
 
+          </div> -->
+          <div class="filter filter-block-1 filter-order-10 filter-type-submit">
+            <input type="submit" value="Telusuri" class="gradient-button" id="bookyourtravel_search_widget-1_search-submit">
+          </div>
+        </div>
+      </form>
+    </div>
+    
     @section("content")
     @show
     <!--// .wrap -->
@@ -1324,12 +1341,12 @@
       if (!initMap) {
         
       }
-    } catch(error) {} finally {
+    } catch(error) {
       initMap = function() {
-
+        
       }
     }
-  </script>
+    </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3Sis_MBeaSHRKlZIPftutQTXQgz5_m8c&callback=initMap">
   </script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

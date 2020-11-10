@@ -3,6 +3,8 @@
 @section("title", $oleholeh->nama)
 
 @section("content")
+<div style="margin: 10px"></div>
+
 <div class="main">
   <div class="wrap">
     <div class="row">
