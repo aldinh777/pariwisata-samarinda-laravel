@@ -16,7 +16,7 @@ class KafeController extends Controller
     public function detail($id) {
         return view('kafe.detail', [
             'kafe' => Kafe::find($id),
-            'rekomendasi_all' => Kafe::limit(3)->get()
+            'rekomendasi_all' => Kafe::where('id', '!=', $id)->limit(3)->get()
         ]);
     }
 }

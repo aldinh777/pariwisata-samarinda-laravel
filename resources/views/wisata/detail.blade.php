@@ -3,7 +3,28 @@
 @section("title", $wisata->nama)
 
 @section("content")
-<div style="margin: 10px"></div>
+<style>
+  @media only screen and (max-width: 600px) {
+    .top-separator {
+      margin-top: 40px;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .top-separator {
+      margin-top: 40px;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .top-separator {
+      margin-top: 20px;
+    }
+  }
+</style>
+
+<div class="top-separator"></div>
 
 <div class="main">
   <div class="wrap">
@@ -48,7 +69,7 @@
         <section id="itinerary" class="tab-content  layout-above" style="display:none">
           <article>
             <h2>Info Lokasi</h2>
-            <div id="location-map" style="width: 100%; height: 320px"></div>
+            <div id="location-map" style="width: 100%; height: 420px"></div>
             <br>
             <p>
               <ul>
@@ -67,7 +88,7 @@
           <article>
             <h2>Hotel Terdekat</h2>
 
-            <div id="hotel-map" style="width: 100%; height: 320px; margin-bottom: 10px"></div>
+            <div id="hotel-map" style="width: 100%; height: 420px; margin-bottom: 10px"></div>
 
             <div style="border: 1px solid #D3D3D3; padding: 5px; padding-bottom: 0px; margin-bottom: 10px;">
               <a class="RecommendedPropertyCard" target="_blank"

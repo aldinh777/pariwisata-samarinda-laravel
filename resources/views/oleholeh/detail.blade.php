@@ -3,7 +3,7 @@
 @section("title", $oleholeh->nama)
 
 @section("content")
-<div style="margin: 10px"></div>
+<div style="margin-top: 40px"></div>
 
 <div class="main">
   <div class="wrap">
@@ -44,8 +44,6 @@
         <section id="itinerary" class="tab-content  layout-above" style="display:none">
           <article>
             <h2>Lokasi Ditemukan</h2>
-
-            <div id="oleholeh-map" style="width: 100%; height: 320px; margin-bottom: 10px"></div>
 
             <div class="Tu970R9Q _1FPHoAYb">
               <div class="_1m-zmplc _2dSbfHm2">
@@ -166,6 +164,8 @@
                 </div>
               </div>
             </div>
+
+            <div id="oleholeh-map" style="width: 100%; height: 420px; margin-bottom: 10px"></div>
 
           </article>
         </section>

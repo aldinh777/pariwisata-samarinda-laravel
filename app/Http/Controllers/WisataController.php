@@ -46,7 +46,7 @@ class WisataController extends Controller
 
         return view('wisata.detail', [
             'wisata' => $wisata,
-            'rekomendasi_all' => Wisata::limit(3)->get(),
+            'rekomendasi_all' => Wisata::where('id', '!=', $id)->limit(3)->get(),
         ]);
     }
 }

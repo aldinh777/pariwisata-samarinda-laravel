@@ -1,5 +1,7 @@
 @extends("header")
 
+@include('search_bar')
+
 @section("title", "Oleh-Oleh Kota Samarinda")
 
 @section("content")

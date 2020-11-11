@@ -3,7 +3,7 @@
 @section("title", $kafe->nama)
 
 @section("content")
-<div style="margin: 10px"></div>
+<div style="margin-top: 40px"></div>
 
 <div class="main">
   <div class="wrap">
@@ -64,7 +64,7 @@
         <section id="itinerary" class="tab-content  layout-above" style="display:none">
           <article>
             <h2>Info Lokasi</h2>
-            <div id="location-map" style="width: 100%; height: 320px"></div>
+            <div id="location-map" style="width: 100%; height: 420px"></div>
             <br>
             <p>
               <ul>

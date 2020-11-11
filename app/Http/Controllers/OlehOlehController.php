@@ -16,7 +16,7 @@ class OleholehController extends Controller
     public function detail($id) {
         return view('oleholeh.detail', [
             'oleholeh' => OlehOleh::find($id),
-            'rekomendasi_all' => OlehOleh::limit(3)->get()
+            'rekomendasi_all' => OlehOleh::where('id', '!=', $id)->limit(3)->get()
         ]);
     }
 }

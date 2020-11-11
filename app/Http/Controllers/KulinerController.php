@@ -16,7 +16,7 @@ class KulinerController extends Controller
     public function detail($id) {
         return view('kuliner.detail', [
             'kuliner' => Kuliner::find($id),
-            'rekomendasi_all' => Kuliner::limit(3)->get()
+            'rekomendasi_all' => Kuliner::where('id', '!=', $id)->limit(3)->get()
         ]);
     }
 }

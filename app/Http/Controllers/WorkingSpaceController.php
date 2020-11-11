@@ -16,7 +16,7 @@ class WorkingSpaceController extends Controller
     public function detail($id) {
         return view('workingspace.detail', [
             'workingspace' => WorkingSpace::find($id),
-            'rekomendasi_all' => WorkingSpace::limit(3)->get()
+            'rekomendasi_all' => WorkingSpace::where('id', '!=', $id)->limit(3)->get()
         ]);
     }
 }

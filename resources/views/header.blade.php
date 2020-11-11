@@ -911,7 +911,7 @@
 <body>
   <div class="page-wrap tour-template-default single single-tour postid-434 custom-background wp-custom-logo  full-screen has-featured-gallery theme-BookYourTravel woocommerce-no-js mega-menu-primary-menu wpb-js-composer js-comp-ver-6.2.0 vc_responsive currency-usd">
     <!--header-->
-    <header class="header header2" style="position: fixed">
+    <header class="header header2" style="position: fixed; z-index: 999">
       <div class="wrap">
         <!--logo-->
         <div class="logo">
@@ -934,7 +934,7 @@
               class="material-icons">shopping_cart</i> <span>0</span></a>
         </div>
         <!--primary navigation-->
-        <div id="mega-menu-wrap-primary-menu" class="mega-menu-wrap">
+        <div id="mega-menu-wrap-primary-menu" class="mega-menu-wrap" onclick="resizeMenu()">
           <div class="mega-menu-toggle">
             <div class="mega-toggle-blocks-left"></div>
             <div class="mega-toggle-blocks-center"></div>
@@ -954,8 +954,12 @@
             <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-50'
               id='mega-menu-item-50'><a class="mega-menu-link"
                 href="/"
-                tabindex="0">Home</a></li>
-            <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-54'
+                tabindex="0">Beranda</a></li>
+            <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-50'
+              id='mega-menu-item-50'><a class="mega-menu-link"
+                href="/about"
+                tabindex="0">Visi Misi</a></li>
+           <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-54'
               id='mega-menu-item-54'><a class="mega-menu-link"
                 href="/wisata"
                 tabindex="0">Wisata</a></li>
@@ -975,10 +979,6 @@
               id='mega-menu-item-50'><a class="mega-menu-link"
                 href="/workingspace"
                 tabindex="0">Working Space</a></li>
-            <li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-50'
-              id='mega-menu-item-50'><a class="mega-menu-link"
-                href="/about"
-                tabindex="0">About</a></li>
           </ul>
         </div>
         <!--//primary navigation-->
@@ -986,30 +986,14 @@
       <!--//wrap-->
     </header>
     <!--//header-->
-    <div class="byt-widget-search-inner" style="background-color:#003580;color:#ffffff;width:100%; margin-top: 81px">
-      <form class="widget-search" method="get" action="/cari">
-        <div class="block block-1 full-width block-order-1">
-          <div class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select filter-tour"
-            style="width: 80%">
-            <div class="select">
-              <input type="text" id="hl_0_l" name="key" value="@yield('search_value')" placeholder="Temukan Tujuan Wisata" />
-            </div>
-          </div>
-          <!-- <div
-            class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select full-width  filter-tour">
+    <div class="magic-divider" style="margin-top: 81px"></div>
+    @section('search')
+    @show
 
-          </div> -->
-          <div class="filter filter-block-1 filter-order-10 filter-type-submit" style="width: 20%">
-            <input type="submit" value="Telusuri" class="gradient-button" id="bookyourtravel_search_widget-1_search-submit">
-          </div>
-        </div>
-      </form>
-    </div>
-    
     @section("content")
     @show
     <!--// .wrap -->
-    <a href="#" class="scroll-to-top" title="Back up"><i class="material-icons">&#xE316;</i></a>
+    <a href="#" class="scroll-to-top" title="Back up" style="z-index: 99"><i class="material-icons">&#xE316;</i></a>
 
     <!--// .main -->
     <div class="page-bottom">
@@ -1355,6 +1339,26 @@
       $('.test-slider').slick();
     });
   </script>
+  <script>
+    function resizeMenu() {
+      if (window.innerWidth < 1024) {
+        var menu = document.getElementById('mega-menu-primary-menu');
+        menu.style.left = 0;
+        menu.style.position = 'fixed';
+        menu.style.height = '100%';
+        menu.style.overflow = 'scroll';
+      }
+    }
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 1024) {
+        var menu = document.getElementById('mega-menu-primary-menu');
+        menu.style.position = 'relative';
+        menu.style.overflow = 'hidden';
+      }
+    })
+  </script>
+
   <!--//page-wrap-->
   </body>
 </html>

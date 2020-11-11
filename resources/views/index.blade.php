@@ -1,5 +1,7 @@
 @extends("header")
 
+@include("search_bar")
+
 @section("title", "Pariwisata Samarinda")
 
 @section("content")
