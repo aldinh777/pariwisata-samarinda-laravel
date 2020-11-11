@@ -27,9 +27,7 @@ Route::get('/kuliner', [KulinerController::class, 'list']);
 Route::get('/oleholeh', [OlehOlehController::class, 'list']);
 Route::get('/workingspace', [WorkingSpaceController::class, 'list']);
 
-Route::get('/wisata/filter', function() {
-  return redirect('/wisata');
-});
+Route::get('/cari', [MainController::class, 'search']);
 
 Route::get('/wisata/{id}', [WisataController::class, 'detail']);
 Route::get('/kafe/{id}', [KafeController::class, 'detail']);

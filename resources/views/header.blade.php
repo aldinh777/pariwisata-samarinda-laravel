@@ -884,7 +884,6 @@
       .wpb_animate_when_almost_visible {
         opacity: 1;
       }
-
     </style>
   </noscript>
   <style type="text/css">
@@ -992,12 +991,12 @@
     </header>
     <!--//header-->
     <div class="byt-widget-search-inner" style="background-color:#003580;color:#ffffff;width:100%; margin-top: 81px">
-      <form class="widget-search" method="get" action="/wisata/filter">
+      <form class="widget-search" method="get" action="/cari">
         <div class="block block-1 full-width block-order-1">
           <div class="filter filter-group filter-block-1 filter-order-1 filter-type-location-select filter-tour"
             style="width: 80%">
             <div class="select">
-              <input type="text" id="hl_0_l" name="key" value="" placeholder="Temukan Tujuan Wisata" />
+              <input type="text" id="hl_0_l" name="key" value="@yield('search_value')" placeholder="Temukan Tujuan Wisata" />
             </div>
           </div>
           <!-- <div

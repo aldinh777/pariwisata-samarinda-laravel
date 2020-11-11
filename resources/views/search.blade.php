@@ -1,163 +1,45 @@
 @extends("header")
 
-@section("title", "Pariwisata Samarinda")
+@section("title", "Hasil Pencarian")
+
+@section("search_value", $key)
 
 @section("content")
-
 <style>
-  /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
-    .mainx {
-      display: none;
-    }
-  }
-
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    .swiper-mobile {
-      display: none;
-    }
-  }
-
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    .swiper-mobile {
-      display: none;
-    }
-  }
-
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    .swiper-mobile {
-      display: none;
-    }
-  }
-
-  .containerx {
-    max-width: 99rem;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .arrow-icon::before {
-    content: none;
-  }
-
-  .mainx .container .swiper-container .swiper-wrapper .swiper-slide .card-image {
-    background: #ffffff;
-    border: none;
-    outline: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
-    border-radius: 2px;
-  }
-
-  .mainx .container .swiper-container .swiper-wrapper .swiper-slide .card-image img {
-    display: block;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
-  .mainx .container .swiper-container .swiper-pagination-bullet {
-    opacity: 0.8;
-    background: #252a32;
-  }
-
-  .mainx .container .swiper-container .swiper-pagination-bullet-active {
-    background: #ffffff;
-  }
-
-  .mainx .container .swiper-container .swiper-button-next,
-  .mainx .container .swiper-container .swiper-button-prev {
-    background-image: none;
-    background-size: 0;
-    background-repeat: no-repeat;
-    background-position: 0;
-    margin-top: -1rem;
-  }
-
-  .mainx .container .swiper-container .swiper-button-next .arrow-icon,
-  .mainx .container .swiper-container .swiper-button-prev .arrow-icon {
-    font-size: 2rem;
-    color: #ffffff;
-  }
-
   .vc_row {
     margin: 0px;
   }
 </style>
 
-<div class="mainx">
-  <div class="vc_row-full-width vc_clearfix" style="height: 10px;"></div>
-  <div class="containerx">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="card-image">
-            <img src="https://source.unsplash.com/1280x720/?nature" alt="Image Slider">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-image">
-            <img src="https://source.unsplash.com/1280x720/?nature,water,animal" alt="Image Slider">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-image">
-            <img src="https://source.unsplash.com/1280x720/?water" alt="Image Slider">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-image">
-            <img src="https://source.unsplash.com/1280x720/?animal" alt="Image Slider">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-image">
-            <img src="https://source.unsplash.com/1280x720/?travel" alt="Image Slider">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card-image">
-            <img src="https://source.unsplash.com/1280x720/?flower" alt="Image Slider">
-          </div>
-        </div>
-      </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-      <!-- Add Scrollbar -->
-      <div class="swiper-button-next">
-        <i class="fas fa-chevron-circle-right arrow-icon"></i>
-      </div>
-      <div class="swiper-button-prev">
-        <i class="fas fa-chevron-circle-left arrow-icon"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="swiper-mobile" style="width: 100%; height: 320px; overflow: hidden">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"
-      style="background: url('/img/islamic-center.jpg'); background-position: center; background-size: cover">
-    </div>
-    <div class="swiper-slide"
-      style="background: url('https://kaltimtoday.co/wp-content/uploads/2019/09/zAIRIN-sAROWON.jpeg'); background-position: center; background-size: cover">
-    </div>
-    <div class="swiper-slide"
-      style="background: url('https://akcdn.detik.net.id/visual/2020/07/06/naruto-1_169.png?w=650'); background-position: center; background-size: cover">
-    </div>
-  </div>
-</div>
-
 <div class="main">
   <div class="wrap" style="padding: 0px">
     <section>
       <article>
+        @if ($no_data)
+        <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824355992">
+          <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper"></div>
+            </div>
+          </div>
+          <div class="wpb_column vc_column_container vc_col-sm-6">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper">
+                <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824316629">
+                  Pencarian Tidak Ditemukan
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper"></div>
+            </div>
+          </div>
+        </div>
+        @endif
+
+        @if (count($wisata_all) > 0)
         <!-- Rekomendasi Wisata -->
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824355992">
           <div class="wpb_column vc_column_container vc_col-sm-3">
@@ -169,7 +51,7 @@
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
                 <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824316629">
-                  Rekomendasi Pariwisata
+                  Hasil Pencarian Wisata
                 </h1>
               </div>
             </div>
@@ -226,7 +108,9 @@
           </div>
         </div>
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+        @endif
 
+        @if (count($kuliner_all) > 0)
         <!-- Rekomendasi Kuliner -->
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824652572">
           <div class="wpb_column vc_column_container vc_col-sm-3">
@@ -238,7 +122,7 @@
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
                 <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824467886">
-                  Rekomendasi Kuliner</h1>
+                  Hasil Pencarian Kuliner</h1>
               </div>
             </div>
           </div>
@@ -278,13 +162,9 @@
           @endforeach
         </div>
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+        @endif
 
-        <!-- Banner -->
-        <div style="text-align: center; margin-top: 10px; padding: 20px">
-          <img src="https://st3.depositphotos.com/2100659/33242/v/1600/depositphotos_332426834-stock-illustration-mega-sale-concept-horizontal-banner.jpg" alt="" style="object-fit: contain">
-        </div>
-        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
-
+        @if (count($oleholeh_all) > 0)
         <!-- Rekomendasi Oleh-Oleh -->
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824652572">
           <div class="wpb_column vc_column_container vc_col-sm-3">
@@ -296,7 +176,7 @@
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
                 <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824467886">
-                  Rekomendasi Oleh-Oleh</h1>
+                  Hasil Pencarian Oleh-Oleh</h1>
               </div>
             </div>
           </div>
@@ -336,7 +216,9 @@
           @endforeach
         </div>
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+        @endif
 
+        @if (count($kafe_all) > 0)
         <!-- Rekomendasi Kafe -->
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824355992">
           <div class="wpb_column vc_column_container vc_col-sm-3">
@@ -348,7 +230,7 @@
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
                 <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824316629">
-                  Rekomendasi Kafe
+                  Hasil Pencarian Kafe
                 </h1>
               </div>
             </div>
@@ -405,13 +287,9 @@
           </div>
         </div>
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+        @endif
 
-        <!-- Banner -->
-        <div style="text-align: center; margin-top: 10px; padding: 20px">
-          <img src="https://st4.depositphotos.com/6188090/19830/v/1600/depositphotos_198308926-stock-illustration-super-sale-discount-horizontal-banner.jpg" alt="" style="object-fit: contain">
-        </div>
-        <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
-
+        @if (count($workingspace_all) > 0)
         <!-- Rekomendasi workingspace -->
         <div class="vc_row wpb_row vc_row-fluid vc_custom_1557824355992">
           <div class="wpb_column vc_column_container vc_col-sm-3">
@@ -423,7 +301,7 @@
             <div class="vc_column-inner">
               <div class="wpb_wrapper">
                 <h1 style="font-size: 37px;text-align: center" class="vc_custom_heading vc_custom_1557824316629">
-                  Rekomendasi Workingspace
+                  Hasil Pencarian Workingspace
                 </h1>
               </div>
             </div>
@@ -480,47 +358,12 @@
           </div>
         </div>
         <div class="vc_row-full-width vc_clearfix" style="height: 40px; background: #e2e2e2;"></div>
+        @endif
+
         <div class="vc_row-full-width vc_clearfix" style="height: 10px"></div>
 
       </article>
     </section>
   </div>
 </div>
-
-<script>
-  // Swiper Configuration
-  var swiper = new Swiper(".swiper-container", {
-    slidesPerView: 1.5,
-    spaceBetween: 10,
-    centeredSlides: true,
-    freeMode: true,
-    grabCursor: true,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    breakpoints: {
-      500: {
-        slidesPerView: 1
-      },
-      700: {
-        slidesPerView: 1.5
-      }
-    }
-  });
-
-  var swiperMobile = new Swiper('.swiper-mobile', {
-    direction: 'horizontal',
-    loop: true,
-  });
-</script>
 @endsection
