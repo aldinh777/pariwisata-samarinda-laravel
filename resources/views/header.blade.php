@@ -908,12 +908,8 @@
     href="https://themes.themeenergy.com/bookyourtravel/travel-tours/wp-content/themes/BookYourTravel/_styler/css/styler.css" />
 </head>
 
-<body
-  class="tour-template-default single single-tour postid-434 custom-background wp-custom-logo  full-screen has-featured-gallery theme-BookYourTravel woocommerce-no-js mega-menu-primary-menu wpb-js-composer js-comp-ver-6.2.0 vc_responsive currency-usd">
-  <div class="page-spinner">
-    <div></div>
-  </div>
-  <div class="page-wrap">
+<body>
+  <div class="page-wrap tour-template-default single single-tour postid-434 custom-background wp-custom-logo  full-screen has-featured-gallery theme-BookYourTravel woocommerce-no-js mega-menu-primary-menu wpb-js-composer js-comp-ver-6.2.0 vc_responsive currency-usd">
     <!--header-->
     <header class="header header2" style="position: fixed">
       <div class="wrap">
