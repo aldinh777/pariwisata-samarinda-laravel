@@ -7,7 +7,7 @@ use App\Wisata;
 use App\Kuliner;
 use App\OlehOleh;
 use App\Kafe;
-use App\Workingspace;
+use App\WorkingSpace;
 
 class MainController extends Controller
 {
