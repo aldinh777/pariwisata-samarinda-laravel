@@ -24,8 +24,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/wisata', [WisataController::class, 'get']);
-Route::get('/kafe', [KafeController::class, 'get']);
-Route::get('/kuliner', [KulinerController::class, 'get']);
-Route::get('/oleholeh', [OlehOlehController::class, 'get']);
-Route::get('/workingspace', [WorkingSpaceController::class, 'get']);
+Route::get('/wisata', ['middleware' => 'cors', 'uses' => 'WisataController@get']);
+Route::get('/kafe', ['middleware' => 'cors', 'uses' => 'KafeController@get']);
+Route::get('/kuliner', ['middleware' => 'cors', 'uses' => 'KulinerController@get']);
+Route::get('/oleholeh', ['middleware' => 'cors', 'uses' => 'OlehOlehController@get']);
+Route::get('/workingspace', ['middleware' => 'cors', 'uses' => 'WorkingSpaceController@get']);
+
+Route::get('/wisata/search', ['middleware' => 'cors', 'uses' => 'WisataController@search']);
+Route::get('/kafe/search', ['middleware' => 'cors', 'uses' => 'KafeController@search']);
+Route::get('/kuliner/search', ['middleware' => 'cors', 'uses' => 'KulinerController@search']);
+Route::get('/oleholeh/search', ['middleware' => 'cors', 'uses' => 'OlehOlehController@search']);
+Route::get('/workingspace/search', ['middleware' => 'cors', 'uses' => 'WorkingSpaceController@search']);

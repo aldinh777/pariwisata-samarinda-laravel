@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\Wisata;
 
 class WisataController extends Controller
@@ -46,6 +47,11 @@ class WisataController extends Controller
             return Wisata::limit($limit)->get();
         }
         return Wisata::all();
+    }
+
+    public function search(Request $request) {
+        $key = $request->input('key');
+        return DB::table('wisata')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
 
     public function detail($id) {

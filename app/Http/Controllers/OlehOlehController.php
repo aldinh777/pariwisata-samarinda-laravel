@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\OlehOleh;
 
 class OleholehController extends Controller
@@ -19,6 +20,11 @@ class OleholehController extends Controller
             return OlehOleh::limit($limit)->get();
         }
         return OlehOleh::all();
+    }
+
+    public function search(Request $request) {
+        $key = $request->input('key');
+        return DB::table('oleh_oleh')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
 
     public function detail($id) {

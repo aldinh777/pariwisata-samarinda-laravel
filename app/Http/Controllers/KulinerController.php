@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\Kuliner;
 
 class KulinerController extends Controller
@@ -19,6 +20,11 @@ class KulinerController extends Controller
             return Kuliner::limit($limit)->get();
         }
         return Kuliner::all();
+    }
+
+    public function search(Request $request) {
+        $key = $request->input('key');
+        return DB::table('kuliner')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
 
     public function detail($id) {

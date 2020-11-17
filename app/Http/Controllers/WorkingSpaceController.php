@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\WorkingSpace;
 
 class WorkingSpaceController extends Controller
@@ -19,6 +20,11 @@ class WorkingSpaceController extends Controller
             return WorkingSpace::limit($limit)->get();
         }
         return WorkingSpace::all();
+    }
+
+    public function search(Request $request) {
+        $key = $request->input('key');
+        return DB::table('working_space')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
 
     public function detail($id) {
