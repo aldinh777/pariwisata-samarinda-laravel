@@ -13,6 +13,14 @@ class KulinerController extends Controller
         ]);
     }
 
+    public function get(Request $request) {
+        $limit = $request->input('limit');
+        if ($limit) {
+            return Kuliner::limit($limit)->get();
+        }
+        return Kuliner::all();
+    }
+
     public function detail($id) {
         return view('kuliner.detail', [
             'kuliner' => Kuliner::find($id),

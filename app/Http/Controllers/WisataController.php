@@ -40,6 +40,14 @@ class WisataController extends Controller
         ]);
     }
 
+    public function get(Request $request) {
+        $limit = $request->input('limit');
+        if ($limit) {
+            return Wisata::limit($limit)->get();
+        }
+        return Wisata::all();
+    }
+
     public function detail($id) {
         $wisata = Wisata::find($id);
         // $jarak = $this::getDistance($wisata->lat, $wisata->lng, $this->bandara['lat'], $this->bandara['lng']);

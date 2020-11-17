@@ -13,6 +13,14 @@ class WorkingSpaceController extends Controller
         ]);
     }
 
+    public function get(Request $request) {
+        $limit = $request->input('limit');
+        if ($limit) {
+            return WorkingSpace::limit($limit)->get();
+        }
+        return WorkingSpace::all();
+    }
+
     public function detail($id) {
         return view('workingspace.detail', [
             'workingspace' => WorkingSpace::find($id),

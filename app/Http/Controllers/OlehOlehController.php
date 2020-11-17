@@ -13,6 +13,14 @@ class OleholehController extends Controller
         ]);
     }
 
+    public function get(Request $request) {
+        $limit = $request->input('limit');
+        if ($limit) {
+            return OlehOleh::limit($limit)->get();
+        }
+        return OlehOleh::all();
+    }
+
     public function detail($id) {
         return view('oleholeh.detail', [
             'oleholeh' => OlehOleh::find($id),

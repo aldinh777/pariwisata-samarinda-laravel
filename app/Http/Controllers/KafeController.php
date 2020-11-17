@@ -13,6 +13,14 @@ class KafeController extends Controller
         ]);
     }
 
+    public function get(Request $request) {
+        $limit = $request->input('limit');
+        if ($limit) {
+            return Kafe::limit($limit)->get();
+        }
+        return Kafe::all();
+    }
+
     public function detail($id) {
         return view('kafe.detail', [
             'kafe' => Kafe::find($id),
