@@ -15,10 +15,20 @@ class OleholehController extends Controller
     }
 
     public function get(Request $request) {
+        $id = $request->input('id');
+        if ($id) {
+            return OlehOleh::find($id);
+        }
+
         $limit = $request->input('limit');
         if ($limit) {
+            $except = $request->input('exceptId');
+            if ($except) {
+                return OlehOleh::where('id', '!=', $except)->limit($limit)->get();
+            }
             return OlehOleh::limit($limit)->get();
         }
+
         return OlehOleh::all();
     }
 

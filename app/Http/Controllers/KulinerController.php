@@ -15,10 +15,20 @@ class KulinerController extends Controller
     }
 
     public function get(Request $request) {
+        $id = $request->input('id');
+        if ($id) {
+            return Kuliner::find($id);
+        }
+
         $limit = $request->input('limit');
         if ($limit) {
+            $except = $request->input('exceptId');
+            if ($except) {
+                return Kuliner::where('id', '!=', $except)->limit($limit)->get();
+            }
             return Kuliner::limit($limit)->get();
         }
+
         return Kuliner::all();
     }
 

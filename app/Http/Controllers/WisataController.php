@@ -42,10 +42,20 @@ class WisataController extends Controller
     }
 
     public function get(Request $request) {
+        $id = $request->input('id');
+        if ($id) {
+            return Wisata::find($id);
+        }
+
         $limit = $request->input('limit');
         if ($limit) {
+            $except = $request->input('exceptId');
+            if ($except) {
+                return Wisata::where('id', '!=', $except)->limit($limit)->get();
+            }
             return Wisata::limit($limit)->get();
         }
+
         return Wisata::all();
     }
 

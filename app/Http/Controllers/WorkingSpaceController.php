@@ -15,10 +15,20 @@ class WorkingSpaceController extends Controller
     }
 
     public function get(Request $request) {
+        $id = $request->input('id');
+        if ($id) {
+            return WorkingSpace::find($id);
+        }
+
         $limit = $request->input('limit');
         if ($limit) {
+            $except = $request->input('exceptId');
+            if ($except) {
+                return WorkingSpace::where('id', '!=', $except)->limit($limit)->get();
+            }
             return WorkingSpace::limit($limit)->get();
         }
+
         return WorkingSpace::all();
     }
 
