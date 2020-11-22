@@ -15,6 +15,7 @@ class CreateKulinersTable extends Migration
     {
         Schema::create('kuliner', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('slug');
             $table->string('nama');
             $table->text('deskripsi_singkat');
             $table->text('deskripsi');

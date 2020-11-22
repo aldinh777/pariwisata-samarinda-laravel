@@ -15,6 +15,7 @@ class CreateWisatasTable extends Migration
     {
         Schema::create('wisata', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('slug');
             $table->string('nama');
             $table->string('lokasi');
             $table->text('deskripsi_singkat');

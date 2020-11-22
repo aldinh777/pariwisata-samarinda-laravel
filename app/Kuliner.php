@@ -9,6 +9,6 @@ class Kuliner extends Model
     protected $table = 'kuliner';
 
     protected $fillable = [
-        'nama', 'deskripsi_singkat', 'deskripsi', 'gambar'
+        'nama', 'slug', 'deskripsi_singkat', 'deskripsi', 'gambar'
     ];
 }

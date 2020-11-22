@@ -15,6 +15,7 @@ class CreateWorkingSpacesTable extends Migration
     {
         Schema::create('working_space', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('slug');
             $table->string('nama');
             $table->string('alamat');
             $table->string('jam_buka');

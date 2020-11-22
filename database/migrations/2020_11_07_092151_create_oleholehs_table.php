@@ -15,6 +15,7 @@ class CreateOleholehsTable extends Migration
     {
         Schema::create('oleh_oleh', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('slug');
             $table->string('nama');
             $table->text('deskripsi_singkat');
             $table->text('deskripsi');

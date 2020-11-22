@@ -9,6 +9,6 @@ class Wisata extends Model
     protected $table = 'wisata';
 
     protected $fillable = [
-        'name', 'lokasi', 'deskripsi_singkat', 'deskripsi', 'gambar', 'lat', 'lng'
+        'name', 'slug', 'lokasi', 'deskripsi_singkat', 'deskripsi', 'gambar', 'lat', 'lng'
     ];
 }

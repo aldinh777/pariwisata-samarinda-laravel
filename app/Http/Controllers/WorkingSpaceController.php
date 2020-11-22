@@ -15,16 +15,16 @@ class WorkingSpaceController extends Controller
     }
 
     public function get(Request $request) {
-        $id = $request->input('id');
-        if ($id) {
-            return WorkingSpace::find($id);
+        $slug = $request->input('slug');
+        if ($slug) {
+            return WorkingSpace::firstWhere('slug', $slug);
         }
 
         $limit = $request->input('limit');
         if ($limit) {
-            $except = $request->input('exceptId');
+            $except = $request->input('except');
             if ($except) {
-                return WorkingSpace::where('id', '!=', $except)->limit($limit)->get();
+                return WorkingSpace::where('slug', '!=', $except)->limit($limit)->get();
             }
             return WorkingSpace::limit($limit)->get();
         }
