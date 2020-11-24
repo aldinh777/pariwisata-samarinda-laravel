@@ -8,6 +8,7 @@ use App\Wisata;
 
 class WisataController extends Controller
 {
+    // Views
     protected $bandara = ['lat' => -0.4429472, 'lng' => 117.1276766];
 
     protected function getDistance($lat1, $lng1, $lat2, $lng2) {
@@ -41,6 +42,17 @@ class WisataController extends Controller
         ]);
     }
 
+    public function detail($id) {
+        $wisata = Wisata::find($id);
+        // $jarak = $this::getDistance($wisata->lat, $wisata->lng, $this->bandara['lat'], $this->bandara['lng']);
+
+        return view('wisata.detail', [
+            'wisata' => $wisata,
+            'rekomendasi_all' => Wisata::where('id', '!=', $id)->limit(3)->get(),
+        ]);
+    }
+
+    // Apis
     public function get(Request $request) {
         $slug = $request->input('slug');
         if ($slug) {
@@ -63,14 +75,38 @@ class WisataController extends Controller
         $key = $request->input('key');
         return DB::table('wisata')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
+    
+    public function create(Request $request) {
+        $wisata = new Wisata();
+        $wisata->nama = $request->input('nama');
+        $wisata->lokasi = $request->input('lokasi');
+        $wisata->deskripsi_singkat = $request->input('deskripsi_singkat');
+        $wisata->deskripsi = $request->input('deskripsi');
+        $wisata->lat = $request->input('lat');
+        $wisata->lng = $request->input('lng');
+        $wisata->gambar = '';
+        $wisata->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
+        $wisata->save();
+        return ['status' => 'created', 'data' => $wisata];
+    }
 
-    public function detail($id) {
-        $wisata = Wisata::find($id);
-        // $jarak = $this::getDistance($wisata->lat, $wisata->lng, $this->bandara['lat'], $this->bandara['lng']);
+    public function update(Request $request) {
+        $wisata = Wisata::firstWhere('slug', $request->input('slug'));
+        $wisata->nama = $request->input('nama');
+        $wisata->lokasi = $request->input('lokasi');
+        $wisata->deskripsi_singkat = $request->input('deskripsi_singkat');
+        $wisata->deskripsi = $request->input('deskripsi');
+        $wisata->lat = $request->input('lat');
+        $wisata->lng = $request->input('lng');
+        // $wisata->gambar = '';
+        $wisata->save();
+        return ['status' => 'updated', 'data' => $wisata];
+    }
 
-        return view('wisata.detail', [
-            'wisata' => $wisata,
-            'rekomendasi_all' => Wisata::where('id', '!=', $id)->limit(3)->get(),
-        ]);
+    public function delete(Request $request) {
+        $slug = $request->input('slug');
+        $wisata = Wisata::firstWhere('slug', $slug);
+        $wisata->delete();
+        return ['status' => 'deleted', 'data' => $wisata];
     }
 }

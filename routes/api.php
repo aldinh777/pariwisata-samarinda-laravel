@@ -24,14 +24,33 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/wisata', ['middleware' => 'cors', 'uses' => 'WisataController@get']);
-Route::get('/kafe', ['middleware' => 'cors', 'uses' => 'KafeController@get']);
-Route::get('/kuliner', ['middleware' => 'cors', 'uses' => 'KulinerController@get']);
-Route::get('/oleholeh', ['middleware' => 'cors', 'uses' => 'OlehOlehController@get']);
-Route::get('/workingspace', ['middleware' => 'cors', 'uses' => 'WorkingSpaceController@get']);
+Route::get('/wisata', [WisataController::class, 'get']);
+Route::post('/wisata', [WisataController::class, 'create']);
+Route::put('/wisata', [WisataController::class, 'update']);
+Route::delete('/wisata', [WisataController::class, 'delete']);
 
-Route::get('/wisata/search', ['middleware' => 'cors', 'uses' => 'WisataController@search']);
-Route::get('/kafe/search', ['middleware' => 'cors', 'uses' => 'KafeController@search']);
-Route::get('/kuliner/search', ['middleware' => 'cors', 'uses' => 'KulinerController@search']);
-Route::get('/oleholeh/search', ['middleware' => 'cors', 'uses' => 'OlehOlehController@search']);
-Route::get('/workingspace/search', ['middleware' => 'cors', 'uses' => 'WorkingSpaceController@search']);
+Route::get('/kafe', [KafeController::class, 'get']);
+Route::post('/kafe', [KafeController::class, 'create']);
+Route::put('/kafe', [KafeController::class, 'update']);
+Route::delete('/kafe', [KafeController::class, 'delete']);
+
+Route::get('/kuliner', [KulinerController::class, 'get']);
+Route::post('/kuliner', [KulinerController::class, 'create']);
+Route::put('/kuliner', [KulinerController::class, 'update']);
+Route::delete('/kuliner', [KulinerController::class, 'delete']);
+
+Route::get('/oleholeh', [OlehOlehController::class, 'get']);
+Route::post('/oleholeh', [OlehOlehController::class, 'create']);
+Route::put('/oleholeh', [OlehOlehController::class, 'update']);
+Route::delete('/oleholeh', [OlehOlehController::class, 'delete']);
+
+Route::get('/workingspace', [WorkingSpaceController::class, 'get']);
+Route::post('/workingspace', [WorkingSpaceController::class, 'create']);
+Route::put('/workingspace', [WorkingSpaceController::class, 'update']);
+Route::delete('/workingspace', [WorkingSpaceController::class, 'delete']);
+
+Route::get('/wisata/search', [WisataController::class, 'search']);
+Route::get('/kafe/search', [KafeController::class, 'search']);
+Route::get('/kuliner/search', [KulinerController::class, 'search']);
+Route::get('/oleholeh/search', [OlehOlehController::class, 'search']);
+Route::get('/workingspace/search', [WorkingSpaceController::class, 'search']);
