@@ -84,7 +84,7 @@ class WisataController extends Controller
         $wisata->deskripsi = $request->input('deskripsi');
         $wisata->lat = $request->input('lat');
         $wisata->lng = $request->input('lng');
-        $wisata->gambar = '';
+        $wisata->gambar = ImageHandler::upload($this, $request, '/wisata');
         $wisata->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $wisata->save();
         return ['status' => 'created', 'data' => $wisata];
@@ -98,7 +98,10 @@ class WisataController extends Controller
         $wisata->deskripsi = $request->input('deskripsi');
         $wisata->lat = $request->input('lat');
         $wisata->lng = $request->input('lng');
-        // $wisata->gambar = '';
+        $gambar = ImageHandler::upload($this, $request, '/wisata');
+        if ($gambar != '') {
+            $wisata->gambar = $gambar;
+        }
         $wisata->save();
         return ['status' => 'updated', 'data' => $wisata];
     }

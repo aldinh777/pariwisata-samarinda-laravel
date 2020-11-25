@@ -51,19 +51,21 @@ class OleholehController extends Controller
         $oleholeh->nama = $request->input('nama');
         $oleholeh->deskripsi_singkat = $request->input('deskripsi_singkat');
         $oleholeh->deskripsi = $request->input('deskripsi');
-        $oleholeh->gambar = '';
+        $oleholeh->gambar = ImageHandler::upload($this, $request, '/oleholeh');
         $oleholeh->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $oleholeh->save();
         return ['status' => 'created', 'data' => $oleholeh];
     }
 
     public function update(Request $request) {
-        // $oleholeh = OlehOleh::firstWhere('slug', $request->input('slug'));
-        return ['Success' => true];
+        $oleholeh = OlehOleh::firstWhere('slug', $request->input('slug'));
         $oleholeh->nama = $request->input('nama');
         $oleholeh->deskripsi_singkat = $request->input('deskripsi_singkat');
         $oleholeh->deskripsi = $request->input('deskripsi');
-        // $oleholeh->gambar = '';
+        $gambar = ImageHandler::upload($this, $request, '/oleholeh');
+        if ($gambar != '') {
+            $oleholeh->gambar = $gambar;
+        }
         $oleholeh->save();
         return ['status' => 'updated', 'data' => $oleholeh];
     }

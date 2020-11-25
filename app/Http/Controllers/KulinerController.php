@@ -51,7 +51,7 @@ class KulinerController extends Controller
         $kuliner->nama = $request->input('nama');
         $kuliner->deskripsi_singkat = $request->input('deskripsi_singkat');
         $kuliner->deskripsi = $request->input('deskripsi');
-        $kuliner->gambar = '';
+        $kuliner->gambar = ImageHandler::upload($this, $request, '/kuliner');
         $kuliner->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $kuliner->save();
         return ['status' => 'created', 'data' => $kuliner];
@@ -62,7 +62,10 @@ class KulinerController extends Controller
         $kuliner->nama = $request->input('nama');
         $kuliner->deskripsi_singkat = $request->input('deskripsi_singkat');
         $kuliner->deskripsi = $request->input('deskripsi');
-        // $kuliner->gambar = '';
+        $gambar = ImageHandler::upload($this, $request, '/kuliner');
+        if ($gambar != '') {
+            $kuliner->gambar = $gambar;
+        }
         $kuliner->save();
         return ['status' => 'updated', 'data' => $kuliner];
     }

@@ -54,7 +54,7 @@ class WorkingSpaceController extends Controller
         $workingspace->deskripsi = $request->input('deskripsi');
         $workingspace->lat = $request->input('lat');
         $workingspace->lng = $request->input('lng');
-        $workingspace->gambar = '';
+        $workingspace->gambar = ImageHandler::upload($this, $request, '/workingspace');
         $workingspace->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $workingspace->save();
         return ['status' => 'created', 'data' => $workingspace];   
@@ -68,7 +68,10 @@ class WorkingSpaceController extends Controller
         $workingspace->deskripsi = $request->input('deskripsi');
         $workingspace->lat = $request->input('lat');
         $workingspace->lng = $request->input('lng');
-        // $workingspace->gambar = '';
+        $gambar = ImageHandler::upload($this, $request, '/workingspace');
+        if ($gambar != '') {
+            $workingspace->gambar = $gambar;
+        }
         $workingspace->save();
         return ['status' => 'updated', 'data' => $workingspace];
     }

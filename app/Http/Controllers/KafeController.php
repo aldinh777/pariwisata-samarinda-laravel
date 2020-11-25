@@ -55,7 +55,7 @@ class KafeController extends Controller
         $kafe->deskripsi = $request->input('deskripsi');
         $kafe->lat = $request->input('lat');
         $kafe->lng = $request->input('lng');
-        $kafe->gambar = '';
+        $kafe->gambar = ImageHandler::upload($this, $request, '/kafe');
         $kafe->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $kafe->save();
         return ['status' => 'created', 'data' => $kafe];
@@ -69,7 +69,10 @@ class KafeController extends Controller
         $kafe->deskripsi = $request->input('deskripsi');
         $kafe->lat = $request->input('lat');
         $kafe->lng = $request->input('lng');
-        // $kafe->gambar = '';
+        $gambar = ImageHandler::upload($this, $request, '/kafe');
+        if ($gambar != '') {
+            $kafe->gambar = $gambar;
+        }
         $kafe->save();
         return ['status' => 'updated', 'data' => $kafe];
     }
