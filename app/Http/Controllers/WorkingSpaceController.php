@@ -46,6 +46,15 @@ class WorkingSpaceController extends Controller
         return DB::table('working_space')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
     
+    public function getLogged(Request $request) {
+        $workingspace = $this->get($request);
+
+        return response()->json([
+            'data' => $workingspace,
+            'loggedIn' => Auth::check()
+        ]);
+    }
+    
     public function create(Request $request) {
         $workingspace = new WorkingSpace();
         $workingspace->nama = $request->input('nama');
@@ -57,7 +66,11 @@ class WorkingSpaceController extends Controller
         $workingspace->gambar = ImageHandler::upload($this, $request, '/workingspace');
         $workingspace->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $workingspace->save();
-        return ['status' => 'created', 'data' => $workingspace];   
+        return response()->json([
+            'status' => 'created',
+            'data' => $workingspace,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function update(Request $request) {
@@ -73,13 +86,21 @@ class WorkingSpaceController extends Controller
             $workingspace->gambar = $gambar;
         }
         $workingspace->save();
-        return ['status' => 'updated', 'data' => $workingspace];
+        return response()->json([
+            'status' => 'updated',
+            'data' => $workingspace,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function delete(Request $request) {
         $slug = $request->input('slug');
         $workingspace = WorkingSpace::firstWhere('slug', $slug);
         $workingspace->delete();
-        return ['status' => 'deleted', 'data' => $workingspace];
+        return response()->json([
+            'status' => 'deleted',
+            'data' => $workingspace,
+            'logged_in' => Auth::check()
+        ]);
     }
 }

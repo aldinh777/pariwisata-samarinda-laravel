@@ -2,14 +2,6 @@
 
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\WisataController;
-use App\Http\Controllers\KafeController;
-use App\Http\Controllers\KulinerController;
-use App\Http\Controllers\OlehOlehController;
-use App\Http\Controllers\WorkingSpaceController;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,38 +20,43 @@ use App\Http\Controllers\WorkingSpaceController;
 Route::post('/register', 'UserController@register');
 Route::post('/login', 'UserController@login');
 
-Route::get('/wisata', [WisataController::class, 'get']);
-Route::get('/kafe', [KafeController::class, 'get']);
-Route::get('/kuliner', [KulinerController::class, 'get']);
-Route::get('/oleholeh', [OlehOlehController::class, 'get']);
-Route::get('/workingspace', [WorkingSpaceController::class, 'get']);
+Route::get('/wisata', 'WisataController@get');
+Route::get('/kafe', 'KafeController@get');
+Route::get('/kuliner', 'KulinerController@get');
+Route::get('/oleholeh', 'OlehOlehController@get');
+Route::get('/workingspace', 'WorkingSpaceController@get');
 
-Route::get('/wisata/search', [WisataController::class, 'search']);
-Route::get('/kafe/search', [KafeController::class, 'search']);
-Route::get('/kuliner/search', [KulinerController::class, 'search']);
-Route::get('/oleholeh/search', [OlehOlehController::class, 'search']);
-Route::get('/workingspace/search', [WorkingSpaceController::class, 'search']);
+Route::get('/wisata/search', 'WisataController@search');
+Route::get('/kafe/search', 'KafeController@search');
+Route::get('/kuliner/search', 'KulinerController@search');
+Route::get('/oleholeh/search', 'OlehOlehController@search');
+Route::get('/workingspace/search', 'WorkingSpaceController@search');
 
 Route::group(['middleware' => 'jwt.verify'], function () {
-    Route::get('/user', 'UserController@getAuthenticatedUser')->middleware('jwt.verify');
+    Route::get('/user', 'UserController@getAuthenticatedUser');
 
-    Route::post('/wisata', [WisataController::class, 'create']);
-    Route::put('/wisata', [WisataController::class, 'update']);
-    Route::delete('/wisata', [WisataController::class, 'delete']);
+    Route::get('/wisata/get', 'WisataController@getLogged');
+    Route::post('/wisata', 'WisataController@create');
+    Route::put('/wisata', 'WisataController@update');
+    Route::delete('/wisata', 'WisataController@delete');
     
-    Route::post('/kafe', [KafeController::class, 'create']);
-    Route::put('/kafe', [KafeController::class, 'update']);
-    Route::delete('/kafe', [KafeController::class, 'delete']);
+    Route::get('/kafe/get', 'KafeController@getLogged');
+    Route::post('/kafe', 'KafeController@create');
+    Route::put('/kafe', 'KafeController@update');
+    Route::delete('/kafe', 'KafeController@delete');
     
-    Route::post('/kuliner', [KulinerController::class, 'create']);
-    Route::put('/kuliner', [KulinerController::class, 'update']);
-    Route::delete('/kuliner', [KulinerController::class, 'delete']);
+    Route::get('/kuliner/get', 'KulinerController@getLogged');
+    Route::post('/kuliner', 'KulinerController@create');
+    Route::put('/kuliner', 'KulinerController@update');
+    Route::delete('/kuliner', 'KulinerController@delete');
     
-    Route::post('/oleholeh', [OlehOlehController::class, 'create']);
-    Route::put('/oleholeh', [OlehOlehController::class, 'update']);
-    Route::delete('/oleholeh', [OlehOlehController::class, 'delete']);
+    Route::get('/oleholeh/get', 'OlehOlehController@getLogged');
+    Route::post('/oleholeh', 'OlehOlehController@create');
+    Route::put('/oleholeh', 'OlehOlehController@update');
+    Route::delete('/oleholeh', 'OlehOlehController@delete');
     
-    Route::post('/workingspace', [WorkingSpaceController::class, 'create']);
-    Route::put('/workingspace', [WorkingSpaceController::class, 'update']);
-    Route::delete('/workingspace', [WorkingSpaceController::class, 'delete']);
+    Route::get('/workingspace/get', 'WorkingSpaceController@getLogged');
+    Route::post('/workingspace', 'WorkingSpaceController@create');
+    Route::put('/workingspace', 'WorkingSpaceController@update');
+    Route::delete('/workingspace', 'WorkingSpaceController@delete');
 });

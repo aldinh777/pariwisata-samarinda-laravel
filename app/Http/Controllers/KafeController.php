@@ -47,6 +47,15 @@ class KafeController extends Controller
         return DB::table('kafe')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
 
+    public function getLogged(Request $request) {
+        $kafe = $this->get($request);
+
+        return response()->json([
+            'data' => $kafe,
+            'loggedIn' => Auth::check()
+        ]);
+    }
+    
     public function create(Request $request) {
         $kafe = new Kafe();
         $kafe->nama = $request->input('nama');
@@ -58,7 +67,11 @@ class KafeController extends Controller
         $kafe->gambar = ImageHandler::upload($this, $request, '/kafe');
         $kafe->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $kafe->save();
-        return ['status' => 'created', 'data' => $kafe];
+        return response()->json([
+            'status' => 'created',
+            'data' => $kafe,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function update(Request $request) {
@@ -74,13 +87,21 @@ class KafeController extends Controller
             $kafe->gambar = $gambar;
         }
         $kafe->save();
-        return ['status' => 'updated', 'data' => $kafe];
+        return response()->json([
+            'status' => 'updated',
+            'data' => $kafe,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function delete(Request $request) {
         $slug = $request->input('slug');
         $kafe = Kafe::firstWhere('slug', $slug);
         $kafe->delete();
-        return ['status' => 'deleted', 'data' => $kafe];
+        return response()->json([
+            'status' => 'deleted',
+            'data' => $kafe,
+            'logged_in' => Auth::check()
+        ]);
     }
 }

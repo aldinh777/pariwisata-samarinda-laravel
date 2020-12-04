@@ -46,6 +46,15 @@ class OleholehController extends Controller
         return DB::table('oleh_oleh')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
     
+    public function getLogged(Request $request) {
+        $oleholeh = $this->get($request);
+
+        return response()->json([
+            'data' => $oleholeh,
+            'loggedIn' => Auth::check()
+        ]);
+    }
+    
     public function create(Request $request) {
         $oleholeh = new OlehOleh();
         $oleholeh->nama = $request->input('nama');
@@ -54,7 +63,11 @@ class OleholehController extends Controller
         $oleholeh->gambar = ImageHandler::upload($this, $request, '/oleholeh');
         $oleholeh->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $oleholeh->save();
-        return ['status' => 'created', 'data' => $oleholeh];
+        return response()->json([
+            'status' => 'created',
+            'data' => $oleholeh,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function update(Request $request) {
@@ -67,13 +80,21 @@ class OleholehController extends Controller
             $oleholeh->gambar = $gambar;
         }
         $oleholeh->save();
-        return ['status' => 'updated', 'data' => $oleholeh];
+        return response()->json([
+            'status' => 'updated',
+            'data' => $oleholeh,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function delete(Request $request) {
         $slug = $request->input('slug');
         $oleholeh = OlehOleh::firstWhere('slug', $slug);
         $oleholeh->delete();
-        return ['status' => 'deleted', 'data' => $oleholeh];
+        return response()->json([
+            'status' => 'deleted',
+            'data' => $oleholeh,
+            'logged_in' => Auth::check()
+        ]);
     }
 }

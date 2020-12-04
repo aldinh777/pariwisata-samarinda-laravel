@@ -46,6 +46,15 @@ class KulinerController extends Controller
         return DB::table('kuliner')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
 
+    public function getLogged(Request $request) {
+        $kuliner = $this->get($request);
+
+        return response()->json([
+            'data' => $kuliner,
+            'loggedIn' => Auth::check()
+        ]);
+    }
+    
     public function create(Request $request) {
         $kuliner = new Kuliner();
         $kuliner->nama = $request->input('nama');
@@ -54,7 +63,11 @@ class KulinerController extends Controller
         $kuliner->gambar = ImageHandler::upload($this, $request, '/kuliner');
         $kuliner->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $kuliner->save();
-        return ['status' => 'created', 'data' => $kuliner];
+        return response()->json([
+            'status' => 'created',
+            'data' => $kuliner,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function update(Request $request) {
@@ -67,13 +80,21 @@ class KulinerController extends Controller
             $kuliner->gambar = $gambar;
         }
         $kuliner->save();
-        return ['status' => 'updated', 'data' => $kuliner];
+        return response()->json([
+            'status' => 'updated',
+            'data' => $kuliner,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function delete(Request $request) {
         $slug = $request->input('slug');
         $kuliner = Kuliner::firstWhere('slug', $slug);
         $kuliner->delete();
-        return ['status' => 'deleted', 'data' => $kuliner];
+        return response()->json([
+            'status' => 'deleted',
+            'data' => $kuliner,
+            'logged_in' => Auth::check()
+        ]);
     }
 }

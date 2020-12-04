@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use DB;
 use App\Wisata;
 
@@ -76,6 +77,15 @@ class WisataController extends Controller
         return DB::table('wisata')->where('nama', 'like', '%'.$key.'%')->orWhere('deskripsi', 'like', '%'.$key.'%')->get();
     }
     
+    public function getLogged(Request $request) {
+        $wisata = $this->get($request);
+
+        return response()->json([
+            'data' => $wisata,
+            'loggedIn' => Auth::check()
+        ]);
+    }
+    
     public function create(Request $request) {
         $wisata = new Wisata();
         $wisata->nama = $request->input('nama');
@@ -87,7 +97,11 @@ class WisataController extends Controller
         $wisata->gambar = ImageHandler::upload($this, $request, '/wisata');
         $wisata->slug = strtolower(str_replace(' ', '-', $request->input('nama')));
         $wisata->save();
-        return ['status' => 'created', 'data' => $wisata];
+        return response()->json([
+            'status' => 'created',
+            'data' => $wisata,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function update(Request $request) {
@@ -103,13 +117,21 @@ class WisataController extends Controller
             $wisata->gambar = $gambar;
         }
         $wisata->save();
-        return ['status' => 'updated', 'data' => $wisata];
+        return response()->json([
+            'status' => 'updated',
+            'data' => $wisata,
+            'logged_in' => Auth::check()
+        ]);
     }
 
     public function delete(Request $request) {
         $slug = $request->input('slug');
         $wisata = Wisata::firstWhere('slug', $slug);
         $wisata->delete();
-        return ['status' => 'deleted', 'data' => $wisata];
+        return response()->json([
+            'status' => 'deleted',
+            'data' => $wisata,
+            'logged_in' => Auth::check()
+        ]);
     }
 }
