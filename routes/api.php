@@ -33,30 +33,32 @@ Route::get('/oleholeh/search', 'OlehOlehController@search');
 Route::get('/workingspace/search', 'WorkingSpaceController@search');
 
 Route::group(['middleware' => 'jwt.verify'], function () {
-    Route::get('/user', 'UserController@getAuthenticatedUser');
+    Route::group(['middleware' => 'csrf'], function () {
+        Route::get('/user', 'UserController@getAuthenticatedUser');
 
-    Route::get('/wisata/get', 'WisataController@getLogged');
-    Route::post('/wisata', 'WisataController@create');
-    Route::put('/wisata', 'WisataController@update');
-    Route::delete('/wisata', 'WisataController@delete');
-    
-    Route::get('/kafe/get', 'KafeController@getLogged');
-    Route::post('/kafe', 'KafeController@create');
-    Route::put('/kafe', 'KafeController@update');
-    Route::delete('/kafe', 'KafeController@delete');
-    
-    Route::get('/kuliner/get', 'KulinerController@getLogged');
-    Route::post('/kuliner', 'KulinerController@create');
-    Route::put('/kuliner', 'KulinerController@update');
-    Route::delete('/kuliner', 'KulinerController@delete');
-    
-    Route::get('/oleholeh/get', 'OlehOlehController@getLogged');
-    Route::post('/oleholeh', 'OlehOlehController@create');
-    Route::put('/oleholeh', 'OlehOlehController@update');
-    Route::delete('/oleholeh', 'OlehOlehController@delete');
-    
-    Route::get('/workingspace/get', 'WorkingSpaceController@getLogged');
-    Route::post('/workingspace', 'WorkingSpaceController@create');
-    Route::put('/workingspace', 'WorkingSpaceController@update');
-    Route::delete('/workingspace', 'WorkingSpaceController@delete');
+        Route::get('/wisata/get', 'WisataController@getLogged');
+        Route::post('/wisata', 'WisataController@create');
+        Route::put('/wisata', 'WisataController@update');
+        Route::delete('/wisata', 'WisataController@delete');
+        
+        Route::get('/kafe/get', 'KafeController@getLogged');
+        Route::post('/kafe', 'KafeController@create');
+        Route::put('/kafe', 'KafeController@update');
+        Route::delete('/kafe', 'KafeController@delete');
+        
+        Route::get('/kuliner/get', 'KulinerController@getLogged');
+        Route::post('/kuliner', 'KulinerController@create');
+        Route::put('/kuliner', 'KulinerController@update');
+        Route::delete('/kuliner', 'KulinerController@delete');
+        
+        Route::get('/oleholeh/get', 'OlehOlehController@getLogged');
+        Route::post('/oleholeh', 'OlehOlehController@create');
+        Route::put('/oleholeh', 'OlehOlehController@update');
+        Route::delete('/oleholeh', 'OlehOlehController@delete');
+        
+        Route::get('/workingspace/get', 'WorkingSpaceController@getLogged');
+        Route::post('/workingspace', 'WorkingSpaceController@create');
+        Route::put('/workingspace', 'WorkingSpaceController@update');
+        Route::delete('/workingspace', 'WorkingSpaceController@delete');
+    });
 });

@@ -4,25 +4,58 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserLoginRequest;
+use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
-class UserController extends Controller {
-    public function login(Request $request) {
-        $credentials = $request->only('email', 'password');
+class UserController extends Controller
+{
+	public function login(UserLoginRequest $request) {
 
-        try {
-            if (! $token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'invalid_credentials'], 400);
-            }
-        } catch (JWTException $e) {
-            return response()->json(['error' => 'could_not_create_token'], 500);
+		// dd($request->cookies);
+
+        if($request->callback == 'unauthorized') {
+            return response()->json([ 'message' => 'Maaf akun ini tidak tersedia X !!' ], 422);
         }
 
-        return response()->json(compact('token'));
-    }
+        $token = (\Session::get('token'));
+        $csrf_token = (\Session::get('csrf_token'));
+
+        return (new UserResource(JWTAuth::user()))
+			->additional([
+				'meta' => [
+					'token' => $token,
+					'exp'	=> config('jwt.ttl'),
+				],
+			])
+            ->response()
+            ->header('Access-Control-Expose-Headers', 'Csrf-Token')
+            ->header('Csrf-Token', $csrf_token)
+	        ->withCookie(
+	            'token', 
+                // JWTAuth::getToken(),
+                $token,
+	            config('jwt.ttl'), 
+	            '/'
+	    );		
+	}
+
+    // public function login2(UserLoginRequest $request) {
+    //     $credentials = $request->only('email', 'password');
+
+    //     try {
+    //         if (! $token = JWTAuth::attempt($credentials)) {
+    //             return response()->json(['error' => 'invalid_credentials'], 400);
+    //         }
+    //     } catch (JWTException $e) {
+    //         return response()->json(['error' => 'could_not_create_token'], 500);
+    //     }
+
+    //     return response()->json(compact('token'));
+    // }
 
     public function register(Request $request) {
         $validator = Validator::make($request->all(), [
