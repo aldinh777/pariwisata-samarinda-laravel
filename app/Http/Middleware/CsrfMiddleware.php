@@ -17,7 +17,8 @@ class CsrfMiddleware
     public function handle($request, Closure $next)
     {
       if (
-          $request->header('csrf-token') !== \JWTAuth::payload()->get('csrf-token')
+        // $request->header('csrf-token') !== \Session::get('csrf_token')
+        $request->header('csrf-token') !== \JWTAuth::payload()->get('csrf-token')
         ) {
             // throw new AuthorizationException('Akses dari luar situs ditolak !!');
             return response()->json([

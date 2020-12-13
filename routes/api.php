@@ -33,6 +33,9 @@ Route::get('/oleholeh/search', 'OlehOlehController@search');
 Route::get('/workingspace/search', 'WorkingSpaceController@search');
 
 Route::group(['middleware' => 'jwt.verify'], function () {
+
+    Route::get('/user/getToken', 'UserController@getToken');
+
     Route::group(['middleware' => 'csrf'], function () {
         Route::get('/user', 'UserController@getAuthenticatedUser');
 

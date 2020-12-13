@@ -41,7 +41,13 @@ class UserController extends Controller
 	            config('jwt.ttl'), 
 	            '/'
 	    );		
-	}
+    }
+    
+    public function getToken(Request $request) {
+        return response()->json([
+            'token' => JWTAuth::payload()->get('csrf-token')
+        ]);
+    }
 
     // public function login2(UserLoginRequest $request) {
     //     $credentials = $request->only('email', 'password');
